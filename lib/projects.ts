@@ -51,6 +51,7 @@ export const projects: Project[] = [
     role: designBuild,
     stack: ["HTML", "Firebase", "Vanilla JS"],
     status: "live",
+    url: "https://martroal.github.io/prode-mundial-2026/",
     screenshots: [],
     sections: [
       {
@@ -92,6 +93,7 @@ export const projects: Project[] = [
     role: { en: "Full-stack", es: "Full-stack" },
     stack: ["Next.js 16", "Supabase", "shadcn/ui", "Tailwind v4"],
     status: "in-progress",
+    url: "https://luminaagenda.click/",
     screenshots: [],
     sections: [
       {
@@ -133,6 +135,7 @@ export const projects: Project[] = [
     role: designBuild,
     stack: ["Vite", "React 19", "Gemini API", "Supabase"],
     status: "live",
+    url: "https://optimal-routine-builder.vercel.app/",
     screenshots: [],
     sections: [
       {
@@ -174,6 +177,7 @@ export const projects: Project[] = [
     role: designBuild,
     stack: ["Vite", "React 19", "Leaflet", "Zustand"],
     status: "live",
+    url: "https://mapitas-omega.vercel.app/",
     screenshots: [],
     sections: [
       {
