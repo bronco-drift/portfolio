@@ -15,7 +15,7 @@ export type Dict = {
   work: { label: string; live: string };
   about: { label: string; p1: string; p2: string };
   contact: { label: string; title: string; email: string; github: string };
-  faq: { label: string; nav: string; intro: string };
+  faq: { label: string; nav: string; intro: string; backHome: string };
   footer: { backToTop: string };
   detail: {
     allWork: string;
@@ -56,6 +56,7 @@ export const dict: Record<Locale, Dict> = {
       nav: "FAQ",
       intro:
         "What I work with, how the process tends to go, and the answers people usually need before reaching out.",
+      backHome: "Back to home",
     },
     footer: {
       backToTop: "Back to top",
@@ -115,6 +116,7 @@ export const dict: Record<Locale, Dict> = {
       nav: "FAQ",
       intro:
         "Con qué trabajo, cómo suele ser el proceso, y las respuestas que la mayoría necesita antes de escribirme.",
+      backHome: "Volver al inicio",
     },
     footer: {
       backToTop: "Volver arriba",

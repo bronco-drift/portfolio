@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "motion/react";
 import { useI18n } from "./i18n-provider";
 import { faqs } from "@/lib/faq";
@@ -37,9 +38,15 @@ export function FaqPageHeader() {
   const { d } = useI18n();
 
   return (
-    <header className="safe-px-6 pb-12 pt-28 md:pb-16 md:pt-40">
+    <header className="safe-px-6 pb-12 pt-24 md:pb-16 md:pt-32">
       <div className="mx-auto max-w-3xl">
-        <h1 className="text-[2.5rem] font-medium leading-[1.05] tracking-[-0.025em] text-ink md:text-[3.5rem]">
+        <Link
+          href="/"
+          className="inline-flex items-center gap-2 text-[13.5px] text-ink-3 transition-colors hover:text-ink"
+        >
+          <span aria-hidden>←</span> {d.faq.backHome}
+        </Link>
+        <h1 className="mt-10 text-[2.5rem] font-medium leading-[1.05] tracking-[-0.025em] text-ink md:text-[3.5rem]">
           {d.faq.label}
         </h1>
         <p className="mt-5 max-w-2xl text-lg leading-relaxed text-ink-2 md:text-xl">
