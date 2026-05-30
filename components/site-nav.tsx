@@ -9,8 +9,8 @@ export function SiteNav() {
   const { d } = useI18n();
 
   return (
-    <header className="sticky top-0 z-40 border-b border-border bg-bg/75 backdrop-blur-xl">
-      <div className="mx-auto flex h-14 max-w-6xl items-center justify-between gap-4 px-6">
+    <header className="safe-pt sticky top-0 z-40 border-b border-border bg-bg/75 backdrop-blur-xl">
+      <div className="safe-px-6 mx-auto flex h-14 max-w-6xl items-center justify-between gap-4">
         <Link
           href="/"
           className="text-[15px] font-medium tracking-tight text-ink transition-colors hover:text-ink-2"

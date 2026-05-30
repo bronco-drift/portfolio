@@ -7,7 +7,7 @@ export default function NotFound() {
   const { d } = useI18n();
 
   return (
-    <main className="px-6 py-32 md:py-48">
+    <main className="safe-px-6 py-32 md:py-48">
       <div className="mx-auto max-w-2xl text-center">
         <p className="font-mono text-[12px] uppercase tracking-[0.08em] text-ink-3">
           {d.notFound.label}

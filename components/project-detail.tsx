@@ -21,7 +21,7 @@ export function ProjectDetail({
   return (
     <main id="top">
       <article>
-        <header className="border-b border-border px-6 pb-14 pt-16 md:pb-20 md:pt-28">
+        <header className="border-b border-border safe-px-6 pb-14 pt-16 md:pb-20 md:pt-28">
           <div className="mx-auto max-w-3xl">
             <Link
               href="/#work"
@@ -113,7 +113,7 @@ export function ProjectDetail({
           </div>
         </header>
 
-        <section className="border-b border-border px-6 py-20 md:py-28">
+        <section className="safe-px-6 border-b border-border py-20 md:py-28">
           <div className="mx-auto max-w-3xl space-y-14">
             {project.sections.map((s) => (
               <div key={s.heading}>
@@ -137,7 +137,7 @@ export function ProjectDetail({
         <section>
           <Link
             href={`/work/${next.slug}`}
-            className="group block border-b border-border px-6 py-16 transition-colors duration-500 hover:bg-elevated md:py-20"
+            className="group block safe-px-6 border-b border-border py-16 transition-colors duration-500 hover:bg-elevated md:py-20"
           >
             <div className="mx-auto max-w-3xl">
               <div className="text-[13px] font-medium tracking-[-0.01em] text-ink-3">

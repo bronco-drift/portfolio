@@ -12,7 +12,7 @@ export function WorkGrid() {
   const { d } = useI18n();
 
   return (
-    <section id="work" className="px-6 pb-24 md:pb-32">
+    <section id="work" className="safe-px-6 pb-24 md:pb-32">
       <div className="mx-auto max-w-6xl">
         <h2 className="text-[13px] font-medium tracking-[-0.01em] text-ink-3">
           {d.work.label}

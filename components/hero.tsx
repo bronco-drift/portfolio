@@ -9,7 +9,7 @@ export function Hero() {
   const { d } = useI18n();
 
   return (
-    <section className="px-6 pb-20 pt-28 md:pb-28 md:pt-40">
+    <section className="safe-px-6 pb-20 pt-28 md:pb-28 md:pt-40">
       <div className="mx-auto max-w-3xl">
         <motion.h1
           initial={{ opacity: 0, y: 14 }}

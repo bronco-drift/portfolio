@@ -31,7 +31,7 @@
     0 1px 2px 0 rgb(10 10 10 / 0.04), 0 16px 40px -12px rgb(10 10 10 / 0.08);
 }
 
-/* Dark theme override — outside @layer base so it wins over @theme defaults */
+/* Dark theme override — outside @layer so it wins over @theme defaults */
 :root[data-theme="dark"] {
   color-scheme: dark;
   --color-bg: #0a0a0a;
@@ -45,6 +45,24 @@
   --shadow-card: 0 1px 2px 0 rgb(0 0 0 / 0.4);
   --shadow-card-hover:
     0 1px 2px 0 rgb(0 0 0 / 0.5), 0 20px 50px -12px rgb(0 0 0 / 0.6);
+}
+
+/* Safe-area utilities — compose with viewport-fit=cover meta */
+@utility safe-px-6 {
+  padding-left: max(1.5rem, env(safe-area-inset-left));
+  padding-right: max(1.5rem, env(safe-area-inset-right));
+}
+
+@utility safe-pt {
+  padding-top: env(safe-area-inset-top);
+}
+
+@utility safe-pb {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+@utility safe-mb {
+  margin-bottom: env(safe-area-inset-bottom);
 }
 
 @layer base {
