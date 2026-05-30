@@ -15,6 +15,7 @@ export type Dict = {
   work: { label: string; live: string };
   about: { label: string; p1: string; p2: string };
   contact: { label: string; title: string; email: string; github: string };
+  faq: { label: string; nav: string };
   footer: { backToTop: string };
   detail: {
     allWork: string;
@@ -49,6 +50,10 @@ export const dict: Record<Locale, Dict> = {
       title: "Open to commissions, collaborations, and well-posed problems.",
       email: "Email",
       github: "GitHub",
+    },
+    faq: {
+      label: "Frequently asked",
+      nav: "FAQ",
     },
     footer: {
       backToTop: "Back to top",
@@ -102,6 +107,10 @@ export const dict: Record<Locale, Dict> = {
       title: "Abierto a encargos, colaboraciones y problemas bien planteados.",
       email: "Email",
       github: "GitHub",
+    },
+    faq: {
+      label: "Preguntas frecuentes",
+      nav: "FAQ",
     },
     footer: {
       backToTop: "Volver arriba",
