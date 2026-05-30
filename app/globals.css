@@ -1,119 +1,58 @@
 @import "tailwindcss";
 
 @theme {
-  /* Type system — distinctive pairing, no Inter/Roboto/Arial */
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-jetbrains-mono), ui-monospace, "Courier New", monospace;
-  --font-display: var(--font-instrument-serif), "Times New Roman", Georgia, serif;
+  --font-sans:
+    var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", sans-serif;
+  --font-mono:
+    var(--font-geist-mono), ui-monospace, "SF Mono", Menlo, monospace;
 
-  /* Tarmac & smoke — monochrome with one warm accent used sparingly */
-  --color-ink: #0a0a0b;
-  --color-ink-2: #111114;
-  --color-ink-3: #1c1c20;
-  --color-ink-4: #2a2a2f;
+  /* Surfaces */
+  --color-bg: #fbfbfa;
+  --color-elevated: #ffffff;
+  --color-border: #ececec;
+  --color-border-strong: #d4d4d4;
 
-  --color-smoke: #ecebe5;
-  --color-smoke-2: #88857d;
-  --color-smoke-3: #4a4842;
-  --color-smoke-4: #2f2e2a;
+  /* Text */
+  --color-ink: #0a0a0a;
+  --color-ink-2: #525252;
+  --color-ink-3: #737373;
+  --color-ink-4: #a3a3a3;
 
-  --color-ember: #e8602c;
+  /* Single quiet accent — Anthropic-esque clay */
+  --color-accent: #c84a1c;
 
   /* Motion */
-  --ease-apex: cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-trail: cubic-bezier(0.7, 0, 0.3, 1);
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Card shadow tokens */
+  --shadow-card: 0 1px 2px 0 rgb(10 10 10 / 0.03);
+  --shadow-card-hover:
+    0 1px 2px 0 rgb(10 10 10 / 0.04), 0 16px 40px -12px rgb(10 10 10 / 0.08);
 }
 
 @layer base {
   :root {
-    color-scheme: dark;
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 
   html,
   body {
-    background-color: var(--color-ink);
-    color: var(--color-smoke);
+    background-color: var(--color-bg);
+    color: var(--color-ink);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    font-feature-settings: "ss01", "cv11";
+    font-feature-settings: "ss01", "ss03";
   }
 
   ::selection {
-    background-color: var(--color-ember);
-    color: var(--color-ink);
+    background-color: var(--color-ink);
+    color: var(--color-bg);
   }
-
-  ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-  }
-  ::-webkit-scrollbar-track {
-    background: var(--color-ink);
-  }
-  ::-webkit-scrollbar-thumb {
-    background: var(--color-ink-3);
-    border-radius: 0;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: var(--color-ink-4);
-  }
-}
-
-/* Grain — applied to body::before, very low opacity, gives the surface a fine tooth */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 9999;
-  opacity: 0.05;
-  mix-blend-mode: overlay;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.6 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-
-/* Live indicator pulse — the only thing on the page that loops forever */
-@keyframes pulse-live {
-  0%,
-  100% {
-    opacity: 1;
-    box-shadow: 0 0 0 0 var(--color-ember);
-  }
-  50% {
-    opacity: 0.55;
-    box-shadow: 0 0 0 4px rgba(232, 96, 44, 0);
-  }
-}
-
-.live-dot {
-  animation: pulse-live 1.8s var(--ease-apex) infinite;
-}
-
-/* Underline that draws in from the left on hover */
-.draw-line {
-  position: relative;
-}
-.draw-line::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -2px;
-  height: 1px;
-  background: currentColor;
-  transform: scaleX(0);
-  transform-origin: left center;
-  transition: transform 700ms var(--ease-apex);
-}
-.draw-line:hover::after,
-.group:hover .draw-line::after {
-  transform: scaleX(1);
-}
-
-/* Quiet a few defaults */
-*,
-*::before,
-*::after {
-  border-color: var(--color-ink-3);
 }

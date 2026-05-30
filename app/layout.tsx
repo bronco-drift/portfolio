@@ -1,41 +1,33 @@
 import type { Metadata } from "next";
-import { Geist, JetBrains_Mono, Instrument_Serif } from "next/font/google";
-import { TelemetryBar } from "@/components/telemetry-bar";
+import { Geist, Geist_Mono } from "next/font/google";
+import { SiteNav } from "@/components/site-nav";
 import { SiteFooter } from "@/components/site-footer";
 import "./globals.css";
 
-const geist = Geist({
+const sans = Geist({
   subsets: ["latin"],
   variable: "--font-geist-sans",
   display: "swap",
 });
 
-const mono = JetBrains_Mono({
+const mono = Geist_Mono({
   subsets: ["latin"],
-  variable: "--font-jetbrains-mono",
-  display: "swap",
-});
-
-const display = Instrument_Serif({
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-instrument-serif",
-  style: ["normal", "italic"],
+  variable: "--font-geist-mono",
   display: "swap",
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://bronco-drift.vercel.app"),
   title: {
-    default: "Bronco Drift — Studio Log",
-    template: "%s · Bronco Drift",
+    default: "Bronco Drift",
+    template: "%s — Bronco Drift",
   },
   description:
-    "An independent design and engineering practice. Refined interfaces, systems built to be lived in, and the occasional cartographic detour.",
+    "Independent web work — interfaces, systems, and the occasional side project.",
   openGraph: {
-    title: "Bronco Drift — Studio Log",
+    title: "Bronco Drift",
     description:
-      "An independent design and engineering practice. Refined interfaces and systems on the web.",
+      "Independent web work — interfaces, systems, and the occasional side project.",
     type: "website",
   },
 };
@@ -46,12 +38,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="en"
-      className={`${geist.variable} ${mono.variable} ${display.variable}`}
-    >
-      <body className="bg-ink text-smoke antialiased selection:bg-ember selection:text-ink">
-        <TelemetryBar />
+    <html lang="en" className={`${sans.variable} ${mono.variable}`}>
+      <body className="bg-bg text-ink antialiased">
+        <SiteNav />
         {children}
         <SiteFooter />
       </body>

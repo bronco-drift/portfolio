@@ -1,49 +1,35 @@
 export function Contact() {
   return (
-    <section id="contact" className="relative border-t border-ink-3">
-      <div className="mx-auto max-w-[1400px] px-6">
-        <div className="grid grid-cols-12 gap-6 py-10 md:py-14">
-          <div className="col-span-12 font-mono text-[10.5px] uppercase tracking-[0.22em] text-smoke-3 md:col-span-1">
-            03
-          </div>
-          <div className="col-span-12 md:col-span-11">
-            <h2 className="font-mono text-[10.5px] uppercase tracking-[0.22em] text-smoke-2">
-              Contact
-            </h2>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-12 gap-6 pb-32 md:pb-56">
-          <div className="col-span-12 md:col-span-10 md:col-start-2">
-            <p className="font-display text-[clamp(3rem,8.5vw,7.5rem)] leading-[0.94] tracking-[-0.025em] text-smoke">
-              Open to <span className="italic">commissions</span>,
-              <br />
-              collaborations, and the
-              <br />
-              occasional well-posed problem.
-            </p>
-
-            <div className="mt-16 grid grid-cols-2 gap-x-12 gap-y-10 md:mt-20 md:max-w-3xl md:grid-cols-3">
-              <Channel
-                label="Email"
-                value="bronco.drift@outlook.com"
-                href="mailto:bronco.drift@outlook.com"
-              />
-              <Channel
-                label="GitHub"
-                value="bronco-drift"
-                href="https://github.com/bronco-drift"
-              />
-              <Channel label="Hours" value="UTC−04 · LATAM" />
-            </div>
-          </div>
+    <section
+      id="contact"
+      className="border-t border-border px-6 py-24 md:py-32"
+    >
+      <div className="mx-auto max-w-3xl">
+        <h2 className="text-[13px] font-medium tracking-[-0.01em] text-ink-3">
+          Contact
+        </h2>
+        <p className="mt-8 max-w-2xl text-[2rem] font-medium leading-[1.15] tracking-[-0.022em] text-ink md:text-[2.6rem]">
+          Open to commissions, collaborations, and well-posed problems.
+        </p>
+        <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-3">
+          <ContactItem
+            label="Email"
+            value="bronco.drift@outlook.com"
+            href="mailto:bronco.drift@outlook.com"
+          />
+          <ContactItem
+            label="GitHub"
+            value="github.com/bronco-drift"
+            href="https://github.com/bronco-drift"
+          />
+          <ContactItem label="Based" value="Latin America · UTC−04" />
         </div>
       </div>
     </section>
   );
 }
 
-function Channel({
+function ContactItem({
   label,
   value,
   href,
@@ -53,34 +39,24 @@ function Channel({
   href?: string;
 }) {
   const isExternal = href?.startsWith("http");
-
-  if (href) {
-    return (
-      <div>
-        <div className="mb-3 font-mono text-[10.5px] uppercase tracking-[0.22em] text-smoke-3">
-          {label}
-        </div>
+  return (
+    <div>
+      <div className="font-mono text-[11px] uppercase tracking-[0.08em] text-ink-3">
+        {label}
+      </div>
+      {href ? (
         <a
           href={href}
-          {...(isExternal
-            ? { target: "_blank", rel: "noreferrer" }
-            : {})}
-          className="draw-line block font-display text-xl text-smoke transition-colors duration-500 hover:text-ember md:text-2xl"
+          {...(isExternal ? { target: "_blank", rel: "noreferrer" } : {})}
+          className="mt-2 inline-block text-[15px] text-ink underline decoration-ink-4 decoration-1 underline-offset-[5px] transition-colors duration-300 hover:decoration-ink"
         >
           {value}
         </a>
-      </div>
-    );
-  }
-
-  return (
-    <div>
-      <div className="mb-3 font-mono text-[10.5px] uppercase tracking-[0.22em] text-smoke-3">
-        {label}
-      </div>
-      <span className="block font-display text-xl text-smoke-2 md:text-2xl">
-        {value}
-      </span>
+      ) : (
+        <span className="mt-2 inline-block text-[15px] text-ink-2">
+          {value}
+        </span>
+      )}
     </div>
   );
 }
