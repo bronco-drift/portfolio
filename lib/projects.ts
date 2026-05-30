@@ -522,8 +522,43 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "laztana-bistro",
+    slug: "verduras-ar",
     number: "14",
+    name: "verduras.ar",
+    tagline: {
+      en: "Fresh produce and pantry, delivered.",
+      es: "Frutas, verduras y almacén, a domicilio.",
+    },
+    description: {
+      en: "Online grocery for a neighborhood greengrocer — home delivery or local pickup, with admin and order tracking.",
+      es: "Almacén online para una verdulería de barrio — envío a domicilio o retiro local, con admin y tracking de pedidos.",
+    },
+    year: "2025",
+    role: designBuild,
+    stack: ["HTML", "JavaScript"],
+    status: "live",
+    url: "https://verduleria-virid.vercel.app/",
+    screenshots: [],
+    sections: [
+      {
+        heading: "Brief",
+        body: {
+          en: "Online grocery delivery for fresh produce and pantry — designed for a corner shop, not a chain.",
+          es: "Delivery online de frutas, verduras y almacén — diseñado para un local de barrio, no una cadena.",
+        },
+      },
+      {
+        heading: "Approach",
+        body: {
+          en: "Admin panel, order tracking, map for delivery zones, mobile-first ordering. Modal-driven flows to keep navigation shallow.",
+          es: "Panel admin, tracking de pedidos, mapa de zonas de delivery, pedido mobile-first. Flujos por modales para mantener la navegación poco profunda.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "laztana-bistro",
+    number: "15",
     name: "Laztana Bistró",
     tagline: {
       en: "An intimate fine-dining bistro in Buenos Aires.",
