@@ -86,7 +86,7 @@ export const dict: Record<Locale, Dict> = {
     nav: { work: "Trabajos", about: "Sobre", contact: "Contacto" },
     hero: {
       title: "Bronco Drift.",
-      body: "Trabajo web independiente — interfaces, sistemas y algún proyecto paralelo. Una pequeña selección de lo enviado, abajo.",
+      body: "Trabajo web independiente — interfaces, sistemas y algún proyecto paralelo. Abajo, una selección de lo que llevé a producción.",
     },
     work: {
       label: "Trabajos seleccionados",
@@ -94,12 +94,12 @@ export const dict: Record<Locale, Dict> = {
     },
     about: {
       label: "Sobre",
-      p1: "Bronco Drift es el nombre de una práctica independiente de diseño e ingeniería. El resultado: interfaces refinadas, sistemas pensados para habitar, y algún desvío cartográfico ocasional.",
-      p2: "Cómodo a lo largo del stack — React, Next.js, Supabase, Firebase — y parcial a proyectos que prefieren la claridad sobre la astucia. Abierto a encargos y colaboraciones.",
+      p1: "Bronco Drift es el nombre bajo el que diseño y programo, por mi cuenta. Lo que sale: interfaces que prefieren la claridad, sistemas pensados para habitar, y algún experimento con mapas cada tanto.",
+      p2: "Trabajo con todo el stack — React, Next.js, Supabase, Firebase — y me llevo mejor con los proyectos que eligen ser claros antes que ingeniosos. Abierto a encargos y colaboraciones.",
     },
     contact: {
       label: "Contacto",
-      title: "Disponible para encargos, colaboraciones y problemas bien planteados.",
+      title: "Abierto a encargos, colaboraciones y problemas bien planteados.",
       email: "Email",
       github: "GitHub",
     },
@@ -107,10 +107,10 @@ export const dict: Record<Locale, Dict> = {
       backToTop: "Volver arriba",
     },
     detail: {
-      allWork: "Todos los trabajos",
-      visitLive: "Visitar sitio",
+      allWork: "Volver al índice",
+      visitLive: "Ir al sitio",
       viewSource: "Código",
-      nextProject: "Próximo proyecto",
+      nextProject: "Siguiente proyecto",
       sections: {
         Brief: "Resumen",
         Approach: "Enfoque",

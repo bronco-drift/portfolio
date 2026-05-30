@@ -45,7 +45,7 @@ export const projects: Project[] = [
     },
     description: {
       en: "Predictor app for the 2026 FIFA World Cup — multi-feature, collaborative, with parallel simulator and live standings.",
-      es: "App de predicciones para la Copa del Mundo 2026 — multi-feature, colaborativa, con simulador paralelo y posiciones en vivo.",
+      es: "App de Prode para el Mundial 2026 — colaborativa, con simulador paralelo y posiciones en vivo.",
     },
     year: "2026",
     role: designBuild,
@@ -57,21 +57,21 @@ export const projects: Project[] = [
         heading: "Brief",
         body: {
           en: "Build a Prode for the 2026 FIFA World Cup that survives a group chat of friends arguing about whether Mexico will make the round of 16. Low-friction, collaborative, fast to load on a phone in a stadium.",
-          es: "Construir un Prode para el Mundial 2026 que sobreviva a un grupo de amigos discutiendo si México pasa de octavos. Baja fricción, colaborativo, rápido para abrir desde el teléfono en un estadio.",
+          es: "Hacer un Prode para el Mundial 2026 que aguante a un grupo de amigos discutiendo si México pasa de octavos. Sin fricción, colaborativo, rápido de abrir desde el teléfono en un estadio.",
         },
       },
       {
         heading: "Approach",
         body: {
           en: "HTML-first, Firebase for sync, no SPA framework overhead. The simulator was added as a parallel feature — not a destructive pivot — to keep the core ritual intact while letting people play out scenarios.",
-          es: "HTML primero, Firebase para sincronizar, sin overhead de framework SPA. El simulador se sumó como feature paralela — no como pivot destructivo — para mantener el ritual central intacto y dejar jugar escenarios.",
+          es: "HTML primero, Firebase para sincronizar, sin overhead de framework SPA. El simulador entró como feature paralela — no como pivot destructivo — para no romper el ritual original y dejar jugar escenarios igual.",
         },
       },
       {
         heading: "Outcome",
         body: {
           en: "Active during the tournament window. Designed to disappear into the background of a long evening.",
-          es: "Activo durante la ventana del torneo. Diseñado para desaparecer en el fondo de una noche larga.",
+          es: "Activo durante toda la ventana del torneo. Pensado para desaparecer en el fondo de una noche larga.",
         },
       },
     ],
@@ -82,11 +82,11 @@ export const projects: Project[] = [
     name: "Lumina",
     tagline: {
       en: "Appointment booking, distilled.",
-      es: "Reserva de citas, destilada.",
+      es: "Reservar turnos, sin vueltas.",
     },
     description: {
       en: "A SaaS for appointment booking — phase-by-phase build on Next 16, Supabase, and shadcn/ui v4.",
-      es: "Un SaaS de reserva de citas — construido fase a fase sobre Next 16, Supabase y shadcn/ui v4.",
+      es: "Un SaaS para reservar turnos — armado fase a fase sobre Next 16, Supabase y shadcn/ui v4.",
     },
     year: "2026",
     role: { en: "Full-stack", es: "Full-stack" },
@@ -98,21 +98,21 @@ export const projects: Project[] = [
         heading: "Brief",
         body: {
           en: "An appointment booking SaaS that removes friction from scheduling without inventing five new concepts for users to learn.",
-          es: "Un SaaS de reserva de citas que saca la fricción de agendar sin inventar cinco conceptos nuevos para aprender.",
+          es: "Un SaaS para reservar turnos que no obliga al usuario a aprender cinco conceptos nuevos antes de agendar.",
         },
       },
       {
         heading: "Approach",
         body: {
           en: "Spec-driven, phase-by-phase implementation. Deploy via Vercel Git integration; manual SQL migrations for full control over schema evolution. Auth, calendar, availability, and notifications composed from first principles.",
-          es: "Implementación por fases guiada por spec. Deploy vía integración Git de Vercel; migraciones SQL manuales para control total sobre la evolución del schema. Auth, calendario, disponibilidad y notificaciones compuestos desde primeros principios.",
+          es: "Implementación por fases guiada por spec. Deploy automático con la integración Git de Vercel; migraciones SQL a mano para tener control total del schema. Auth, calendario, disponibilidad y notificaciones armados desde cero.",
         },
       },
       {
         heading: "Status",
         body: {
           en: "In active development. Shipping in vertical slices that work end-to-end before broadening.",
-          es: "En desarrollo activo. Lanzando en rebanadas verticales que funcionan punta a punta antes de ensanchar.",
+          es: "En desarrollo activo. Saco features completas que funcionan punta a punta antes de seguir agregando.",
         },
       },
     ],
@@ -146,14 +146,14 @@ export const projects: Project[] = [
         heading: "Approach",
         body: {
           en: "Gemini for plan synthesis, Supabase for persistence, a structured movement library to keep the model honest about volume, frequency, and recovery windows. A theme sandbox runs in parallel for skin experiments without touching production.",
-          es: "Gemini para sintetizar el plan, Supabase para persistir, una librería estructurada de movimientos para mantener honesto al modelo sobre volumen, frecuencia y ventanas de recuperación. Un sandbox de temas corre en paralelo para experimentar skins sin tocar producción.",
+          es: "Gemini sintetiza el plan, Supabase guarda, y una librería estructurada de movimientos mantiene al modelo a raya con volumen, frecuencia y descansos. En paralelo corre un sandbox de temas para experimentar skins sin tocar producción.",
         },
       },
       {
         heading: "Outcome",
         body: {
           en: "Shipped and iterating. The most-used surface is the weekly view; routines export cleanly.",
-          es: "Lanzado e iterando. La superficie más usada es la vista semanal; las rutinas exportan limpias.",
+          es: "Lanzado y en iteración. Lo más usado es la vista semanal; las rutinas exportan limpias.",
         },
       },
     ],
@@ -187,14 +187,14 @@ export const projects: Project[] = [
         heading: "Approach",
         body: {
           en: "Static-first. CSVs as the source of truth, parsed at build time. Leaflet for the map layer, Zustand for filter state. No backend, no auth, no friction.",
-          es: "Estático primero. CSV como fuente de verdad, parseados al build. Leaflet para la capa de mapa, Zustand para el estado de filtros. Sin backend, sin auth, sin fricción.",
+          es: "Estático primero. Los CSV son la fuente de verdad, se parsean al build. Leaflet para la capa de mapa, Zustand para el estado de filtros. Sin backend, sin auth, sin fricción.",
         },
       },
       {
         heading: "Outcome",
         body: {
           en: "Live and embeddable. Designed to be quoted from, not curated through.",
-          es: "En vivo y embebible. Diseñado para citarse, no para curarse.",
+          es: "En vivo y embebible. Pensado para citar los datos, no para perderse adentro.",
         },
       },
     ],
@@ -209,7 +209,7 @@ export const projects: Project[] = [
     },
     description: {
       en: "Landing/hub for the small apps published under the Bronco Drift handle.",
-      es: "Landing/hub para las pequeñas apps publicadas bajo el handle Bronco Drift.",
+      es: "Landing/hub de las apps que publico bajo el nombre Bronco Drift.",
     },
     year: "2025",
     role: designBuild,
@@ -222,14 +222,14 @@ export const projects: Project[] = [
         heading: "Brief",
         body: {
           en: "A directory + showcase for the working name's growing collection of small apps.",
-          es: "Un directorio + vidriera para la colección creciente de pequeñas apps bajo el handle.",
+          es: "Un directorio + vidriera para las apps que voy publicando bajo Bronco Drift.",
         },
       },
       {
         heading: "Approach",
         body: {
           en: "Vite + React, deployed on Vercel. Lean, self-contained, easy to extend as new apps ship.",
-          es: "Vite + React, desplegado en Vercel. Liviano, autocontenido, fácil de extender a medida que salen nuevas apps.",
+          es: "Vite + React, deploy en Vercel. Liviano, autocontenido, fácil de extender cuando salen nuevas apps.",
         },
       },
     ],
@@ -240,11 +240,11 @@ export const projects: Project[] = [
     name: "Vikings.TXT",
     tagline: {
       en: "A retro TXT mini-game, brought back from Python.",
-      es: "Un mini-juego TXT retro, traído de vuelta desde Python.",
+      es: "Un mini-juego TXT viejo, llevado de Python al navegador con estética retro.",
     },
     description: {
       en: "Text-based adventure originally built in Python, recreated for the browser with retro TXT visuals.",
-      es: "Aventura basada en texto originalmente hecha en Python, recreada en el navegador con visuales TXT retro.",
+      es: "Mini-juego de aventura en modo texto que hice en Python, reescrito para el navegador con estética TXT retro.",
     },
     year: "2024",
     role: designBuild,
@@ -257,14 +257,14 @@ export const projects: Project[] = [
         heading: "Brief",
         body: {
           en: "Bring an old Python mini-game I made years ago back to life — in the browser, with the retro look intact.",
-          es: "Resucitar un mini-juego en Python que hice hace años — ahora en el navegador, con la estética retro intacta.",
+          es: "Revivir un mini-juego en Python que hice hace años — ahora en el navegador, con la estética retro intacta.",
         },
       },
       {
         heading: "Approach",
         body: {
           en: "Pure HTML/CSS/JS recreating the TXT feel. Monospace type, terminal-style frames, intentional period aesthetic. Mechanics ported directly from the original.",
-          es: "HTML/CSS/JS puro recreando el feel TXT. Type monospace, marcos estilo terminal, estética de época intencional. Mecánicas portadas directo del original.",
+          es: "HTML/CSS/JS puro recreando la onda TXT. Tipografía monospace, marcos estilo terminal, estética de época buscada a propósito. Las mecánicas se portaron directo del original.",
         },
       },
       {
@@ -282,11 +282,11 @@ export const projects: Project[] = [
     name: "FuerzAPP",
     tagline: {
       en: "A no-friction workout logger.",
-      es: "Un registro de entrenamientos sin fricción.",
+      es: "Anotar entrenamientos sin trabarse.",
     },
     description: {
       en: "Training log focused on speed of entry and clear progress views.",
-      es: "Registro de entrenamientos enfocado en velocidad de carga y vistas de progreso claras.",
+      es: "Registro de entrenamientos enfocado en cargar rápido y mostrar el progreso claro.",
     },
     year: "2024",
     role: designBuild,
@@ -299,14 +299,14 @@ export const projects: Project[] = [
         heading: "Brief",
         body: {
           en: "Log a workout in the time it takes to drink a sip of water between sets.",
-          es: "Registrar un entrenamiento en lo que tardás en tomar un trago de agua entre series.",
+          es: "Anotar una serie en lo que tardás en tomar un trago de agua entre repeticiones.",
         },
       },
       {
         heading: "Approach",
         body: {
           en: "One-thumb logging, big tap targets, minimal navigation. Designed for use mid-set, not between sessions.",
-          es: "Registro a un solo pulgar, áreas de tap grandes, navegación mínima. Diseñado para usar en plena serie, no entre sesiones.",
+          es: "Manejable con un solo pulgar, botones grandes, navegación mínima. Pensado para usar en plena serie, no entre sesiones.",
         },
       },
     ],
@@ -341,7 +341,7 @@ export const projects: Project[] = [
         heading: "Approach",
         body: {
           en: "Browser-side PWA. Drop in images, type captions, hit print. Works offline; nothing leaves the device.",
-          es: "PWA client-side. Arrastrás imágenes, escribís captions, imprimís. Funciona offline; nada sale del dispositivo.",
+          es: "PWA client-side. Tirás las imágenes adentro, escribís los textos, imprimís. Funciona offline; nada sale del dispositivo.",
         },
       },
     ],
@@ -352,11 +352,11 @@ export const projects: Project[] = [
     name: "Throne of Glass — Tandem Reader",
     tagline: {
       en: "Reading-order tracker for the Throne of Glass tandem read.",
-      es: "Tracker del orden de lectura tandem de Throne of Glass.",
+      es: "Orden de lectura en tandem de Throne of Glass, marcado capítulo a capítulo.",
     },
     description: {
       en: "Progress tracker for reading the Throne of Glass series in tandem — interleaving chapters across books in the right order.",
-      es: "Tracker de progreso para leer la saga Throne of Glass en tandem — intercalando capítulos entre libros en el orden correcto.",
+      es: "Tracker para leer la saga Throne of Glass en tandem — intercalando capítulos de varios libros en el orden correcto.",
     },
     year: "2024",
     role: designBuild,
@@ -369,14 +369,14 @@ export const projects: Project[] = [
         heading: "Brief",
         body: {
           en: "Make the tandem reading order of the Throne of Glass series legible and trackable — without printing a chart.",
-          es: "Hacer legible y trackeable el orden tandem de lectura de la saga Throne of Glass — sin imprimir un cuadro.",
+          es: "Hacer claro y trackeable el orden tandem de lectura de Throne of Glass, sin tener que imprimirse un cuadro.",
         },
       },
       {
         heading: "Approach",
         body: {
           en: "Static reading list with progress state. One tap per chapter. Saves locally; no account, no sync.",
-          es: "Lista estática de lectura con estado de progreso. Un tap por capítulo. Guarda local; sin cuenta, sin sync.",
+          es: "Lista estática de lectura con estado de progreso. Un tap por capítulo. Guarda local; sin cuenta y sin sync.",
         },
       },
     ],
@@ -387,11 +387,11 @@ export const projects: Project[] = [
     name: "Rally Aesthetic",
     tagline: {
       en: "A rally-inspired aesthetic experiment, still in beta.",
-      es: "Un experimento estético inspirado en rally, todavía en beta.",
+      es: "Un experimento estético inspirado en el rally, todavía en beta.",
     },
     description: {
       en: "HTML playground exploring rally racing aesthetics — type, color, motion.",
-      es: "Playground HTML explorando estética de rally — type, color, motion.",
+      es: "Playground HTML explorando estética de rally — tipografía, color y movimiento.",
     },
     year: "2026",
     role: designBuild,
@@ -404,14 +404,14 @@ export const projects: Project[] = [
         heading: "Brief",
         body: {
           en: "A visual experiment around rally racing tropes — type, color, motion — without committing to a product.",
-          es: "Un experimento visual alrededor de los tropos del rally — type, color, motion — sin comprometerse con un producto.",
+          es: "Un experimento visual alrededor de los códigos del rally — tipografía, color, movimiento — sin compromiso con un producto.",
         },
       },
       {
         heading: "Approach",
         body: {
           en: "Pure HTML/CSS, no framework. Iterating on the right balance between authentic and overwrought. Still in beta.",
-          es: "HTML/CSS puro, sin framework. Iterando el balance entre auténtico y excesivo. Todavía en beta.",
+          es: "HTML/CSS puro, sin framework. Iterando el balance entre auténtico y sobrecargado. Todavía en beta.",
         },
       },
     ],
@@ -422,11 +422,11 @@ export const projects: Project[] = [
     name: "GreekYogurt.ar",
     tagline: {
       en: "Landing for a small-batch Greek yogurt brand in Buenos Aires.",
-      es: "Landing para una marca artesanal de yogur griego en Buenos Aires.",
+      es: "Landing para una marca de yogur griego artesanal hecho en Buenos Aires.",
     },
     description: {
       en: "Brand landing — handmade in Buenos Aires, 100% natural, no preservatives.",
-      es: "Landing de marca — hecho a mano en Buenos Aires, 100% natural, sin conservantes.",
+      es: "Landing de marca — hecho a mano en Buenos Aires, 100% natural y sin conservantes.",
     },
     year: "2025",
     role: designBuild,
@@ -439,14 +439,14 @@ export const projects: Project[] = [
         heading: "Brief",
         body: {
           en: "A landing page for a small-batch Greek yogurt brand. Handmade in Buenos Aires, 100% natural, no preservatives.",
-          es: "Una landing para una marca de yogur griego artesanal. Hecho a mano en Buenos Aires, 100% natural, sin conservantes.",
+          es: "Landing para una marca chica de yogur griego artesanal. Hecho a mano en Buenos Aires, 100% natural y sin conservantes.",
         },
       },
       {
         heading: "Approach",
         body: {
           en: "Product story above the fold. Clean type, warm photography, direct purchase path.",
-          es: "Historia de producto sobre el fold. Type limpia, fotografía cálida, camino directo a la compra.",
+          es: "La historia del producto arriba de todo. Tipografía limpia, fotografía cálida y la compra a un par de clics.",
         },
       },
     ],
@@ -457,11 +457,11 @@ export const projects: Project[] = [
     name: "WebStudio Argentina",
     tagline: {
       en: "A small studio shipping modern, fast websites.",
-      es: "Un estudio pequeño entregando sitios web modernos y rápidos.",
+      es: "Estudio chico haciendo sitios web modernos y rápidos.",
     },
     description: {
       en: "Studio landing offering modern, fast web development for Argentine SMBs.",
-      es: "Landing del estudio ofreciendo desarrollo web moderno y rápido para PyMEs argentinas.",
+      es: "Landing del estudio. Desarrollo web moderno y rápido para PyMEs argentinas.",
     },
     year: "2024",
     role: designBuild,
@@ -474,14 +474,14 @@ export const projects: Project[] = [
         heading: "Brief",
         body: {
           en: "A landing for a small web studio shipping fast, modern sites.",
-          es: "Una landing para un pequeño estudio web que entrega sitios modernos y rápidos.",
+          es: "Landing para un estudio chico que hace sitios modernos y rápidos.",
         },
       },
       {
         heading: "Approach",
         body: {
           en: "Copy-led, clear tiers, built to convert. Lightweight by design.",
-          es: "Copy al frente, tiers claros, hecho para convertir. Liviano por diseño.",
+          es: "Copy al frente, planes claros, pensado para convertir. Liviano a propósito.",
         },
       },
     ],
@@ -492,11 +492,11 @@ export const projects: Project[] = [
     name: "MAURO Barbershop",
     tagline: {
       en: "Brand and booking site for a premium Buenos Aires barbershop.",
-      es: "Branding y reservas para una barbería premium en Buenos Aires.",
+      es: "Sitio y reservas para una barbería premium de Buenos Aires.",
     },
     description: {
       en: "Web presence for MAURO — a Buenos Aires barbershop with two decades of cuts behind it.",
-      es: "Presencia web para MAURO — una barbería de Buenos Aires con dos décadas de cortes a cuestas.",
+      es: "Sitio para MAURO — una barbería de Buenos Aires con veinte años de cortes encima.",
     },
     year: "2025",
     role: designBuild,
@@ -509,14 +509,14 @@ export const projects: Project[] = [
         heading: "Brief",
         body: {
           en: "A site that matches the chair: refined, confident, no fluff.",
-          es: "Un sitio a la altura del sillón: refinado, seguro, sin relleno.",
+          es: "Un sitio a la altura del sillón: refinado, firme, sin relleno.",
         },
       },
       {
         heading: "Approach",
         body: {
           en: "Clean type, strong portrait photography, simple booking flow. Built for a barbershop with two decades of cuts behind it.",
-          es: "Type limpia, fotografía de retrato fuerte, flujo de reserva simple. Hecho para una barbería con dos décadas de cortes a cuestas.",
+          es: "Tipografía limpia, fotografía de retrato fuerte y reserva en pocos pasos. Para una barbería con veinte años de cortes encima.",
         },
       },
     ],
@@ -527,11 +527,11 @@ export const projects: Project[] = [
     name: "verduras.ar",
     tagline: {
       en: "Fresh produce and pantry, delivered.",
-      es: "Frutas, verduras y almacén, a domicilio.",
+      es: "Frutas, verduras y almacén a domicilio.",
     },
     description: {
       en: "Online grocery for a neighborhood greengrocer — home delivery or local pickup, with admin and order tracking.",
-      es: "Almacén online para una verdulería de barrio — envío a domicilio o retiro local, con admin y tracking de pedidos.",
+      es: "Almacén online para una verdulería de barrio — envío a domicilio o retiro en local, con panel admin y tracking de pedidos.",
     },
     year: "2025",
     role: designBuild,
@@ -544,14 +544,14 @@ export const projects: Project[] = [
         heading: "Brief",
         body: {
           en: "Online grocery delivery for fresh produce and pantry — designed for a corner shop, not a chain.",
-          es: "Delivery online de frutas, verduras y almacén — diseñado para un local de barrio, no una cadena.",
+          es: "Delivery online de frutas, verduras y almacén — pensado para un local de barrio, no para una cadena.",
         },
       },
       {
         heading: "Approach",
         body: {
           en: "Admin panel, order tracking, map for delivery zones, mobile-first ordering. Modal-driven flows to keep navigation shallow.",
-          es: "Panel admin, tracking de pedidos, mapa de zonas de delivery, pedido mobile-first. Flujos por modales para mantener la navegación poco profunda.",
+          es: "Panel admin, tracking de pedidos, mapa de zonas de delivery y pedido mobile-first. Los flujos van por modales para que la navegación quede simple, sin pantallas anidadas.",
         },
       },
     ],
@@ -562,11 +562,11 @@ export const projects: Project[] = [
     name: "Laztana Bistró",
     tagline: {
       en: "An intimate fine-dining bistro in Buenos Aires.",
-      es: "Un bistró íntimo de cocina de autor en Buenos Aires.",
+      es: "Bistró íntimo de cocina de autor en Buenos Aires.",
     },
     description: {
       en: "Restaurant site for Laztana — author-driven cuisine and reservations.",
-      es: "Sitio para Laztana — cocina de autor y reservas.",
+      es: "Sitio para Laztana — cocina de autor con reserva en línea.",
     },
     year: "2025",
     role: designBuild,
@@ -579,14 +579,14 @@ export const projects: Project[] = [
         heading: "Brief",
         body: {
           en: "A restaurant site that doesn't get in the way of 'book a table.'",
-          es: "Un sitio de restaurante que no se mete entre vos y 'reservar mesa'.",
+          es: "Un sitio de restaurante que no se mete entre vos y la reserva.",
         },
       },
       {
         heading: "Approach",
         body: {
           en: "Plate photography front and center, copy that gets out of the way, reservation a tap away.",
-          es: "Fotografía de platos al frente, copy que se hace a un lado, reserva a un tap de distancia.",
+          es: "Fotografía de platos al frente, copy que se hace a un lado y la reserva a un tap de distancia.",
         },
       },
     ],
