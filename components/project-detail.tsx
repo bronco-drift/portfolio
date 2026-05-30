@@ -40,13 +40,6 @@ export function ProjectDetail({
                 <span>{project.year}</span>
                 <span className="text-ink-4">·</span>
                 <span>{t(project.role, locale)}</span>
-                <span className="text-ink-4">·</span>
-                <span className="flex items-center gap-1.5">
-                  {project.status === "live" && (
-                    <span className="size-1.5 rounded-full bg-[var(--color-accent)]" />
-                  )}
-                  {d.status[project.status]}
-                </span>
               </div>
 
               <h1 className="mt-5 text-[2.6rem] font-medium leading-[1.04] tracking-[-0.028em] text-ink md:text-[4rem]">

@@ -28,8 +28,7 @@ export function WorkGrid() {
 }
 
 function ProjectCard({ project, index }: { project: Project; index: number }) {
-  const { locale, d } = useI18n();
-  const hasUrl = !!project.url;
+  const { locale } = useI18n();
 
   return (
     <motion.div
@@ -76,12 +75,6 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
                 {s}
               </span>
             ))}
-            {hasUrl && (
-              <span className="ml-auto inline-flex items-center gap-1.5 font-mono text-[11px] text-ink-3">
-                <span className="size-1.5 rounded-full bg-[var(--color-accent)]" />
-                {d.work.live}
-              </span>
-            )}
           </div>
         </div>
       </Link>
