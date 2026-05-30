@@ -13,6 +13,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 1,
   };
 
+  const faq: MetadataRoute.Sitemap[number] = {
+    url: `${base}/faq`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.6,
+  };
+
   const work: MetadataRoute.Sitemap = projects.map((p) => ({
     url: `${base}/work/${p.slug}`,
     lastModified: now,
@@ -20,5 +27,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [root, ...work];
+  return [root, faq, ...work];
 }

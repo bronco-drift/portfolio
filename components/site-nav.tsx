@@ -25,9 +25,6 @@ export function SiteNav() {
           <Link href="/#about" className="transition-colors hover:text-ink">
             {d.nav.about}
           </Link>
-          <Link href="/#faq" className="transition-colors hover:text-ink">
-            {d.faq.nav}
-          </Link>
           <Link href="/#contact" className="transition-colors hover:text-ink">
             {d.nav.contact}
           </Link>
