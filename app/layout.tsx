@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { I18nProvider } from "@/components/i18n-provider";
 import { SiteNav } from "@/components/site-nav";
 import { SiteFooter } from "@/components/site-footer";
 import "./globals.css";
@@ -32,17 +33,35 @@ export const metadata: Metadata = {
   },
 };
 
+const NO_FLASH_SCRIPT = `
+(function(){try{
+  var s = localStorage.getItem('theme');
+  var t = s || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  document.documentElement.dataset.theme = t;
+  var l = localStorage.getItem('locale');
+  if (l === 'es' || l === 'en') document.documentElement.lang = l;
+}catch(e){}})();
+`;
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${sans.variable} ${mono.variable}`}>
+    <html lang="en" className={`${sans.variable} ${mono.variable}`} suppressHydrationWarning>
+      <head>
+        <script
+          // No-flash theme + locale init; runs before paint.
+          dangerouslySetInnerHTML={{ __html: NO_FLASH_SCRIPT }}
+        />
+      </head>
       <body className="bg-bg text-ink antialiased">
-        <SiteNav />
-        {children}
-        <SiteFooter />
+        <I18nProvider>
+          <SiteNav />
+          {children}
+          <SiteFooter />
+        </I18nProvider>
       </body>
     </html>
   );

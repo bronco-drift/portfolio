@@ -1,4 +1,10 @@
+"use client";
+
+import { useI18n } from "./i18n-provider";
+
 export function Contact() {
+  const { d } = useI18n();
+
   return (
     <section
       id="contact"
@@ -6,23 +12,22 @@ export function Contact() {
     >
       <div className="mx-auto max-w-3xl">
         <h2 className="text-[13px] font-medium tracking-[-0.01em] text-ink-3">
-          Contact
+          {d.contact.label}
         </h2>
         <p className="mt-8 max-w-2xl text-[2rem] font-medium leading-[1.15] tracking-[-0.022em] text-ink md:text-[2.6rem]">
-          Open to commissions, collaborations, and well-posed problems.
+          {d.contact.title}
         </p>
-        <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-3">
+        <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2">
           <ContactItem
-            label="Email"
+            label={d.contact.email}
             value="bronco.drift@outlook.com"
             href="mailto:bronco.drift@outlook.com"
           />
           <ContactItem
-            label="GitHub"
+            label={d.contact.github}
             value="github.com/bronco-drift"
             href="https://github.com/bronco-drift"
           />
-          <ContactItem label="Based" value="Latin America · UTC−04" />
         </div>
       </div>
     </section>
@@ -53,9 +58,7 @@ function ContactItem({
           {value}
         </a>
       ) : (
-        <span className="mt-2 inline-block text-[15px] text-ink-2">
-          {value}
-        </span>
+        <span className="mt-2 inline-block text-[15px] text-ink-2">{value}</span>
       )}
     </div>
   );

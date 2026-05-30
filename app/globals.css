@@ -7,7 +7,7 @@
   --font-mono:
     var(--font-geist-mono), ui-monospace, "SF Mono", Menlo, monospace;
 
-  /* Surfaces */
+  /* Surfaces — light defaults */
   --color-bg: #fbfbfa;
   --color-elevated: #ffffff;
   --color-border: #ececec;
@@ -19,16 +19,32 @@
   --color-ink-3: #737373;
   --color-ink-4: #a3a3a3;
 
-  /* Single quiet accent — Anthropic-esque clay */
+  /* Single accent */
   --color-accent: #c84a1c;
 
   /* Motion */
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
 
-  /* Card shadow tokens */
+  /* Shadows */
   --shadow-card: 0 1px 2px 0 rgb(10 10 10 / 0.03);
   --shadow-card-hover:
     0 1px 2px 0 rgb(10 10 10 / 0.04), 0 16px 40px -12px rgb(10 10 10 / 0.08);
+}
+
+/* Dark theme override — outside @layer base so it wins over @theme defaults */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: #0a0a0a;
+  --color-elevated: #131313;
+  --color-border: #1f1f1f;
+  --color-border-strong: #2f2f2f;
+  --color-ink: #ededed;
+  --color-ink-2: #b4b4b4;
+  --color-ink-3: #8a8a8a;
+  --color-ink-4: #525252;
+  --shadow-card: 0 1px 2px 0 rgb(0 0 0 / 0.4);
+  --shadow-card-hover:
+    0 1px 2px 0 rgb(0 0 0 / 0.5), 0 20px 50px -12px rgb(0 0 0 / 0.6);
 }
 
 @layer base {
@@ -49,6 +65,22 @@
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     font-feature-settings: "ss01", "ss03";
+  }
+
+  /* Smooth theme transitions on chrome surfaces only — not on every element */
+  body,
+  header,
+  footer,
+  section,
+  article,
+  aside,
+  nav,
+  main,
+  [data-theme-aware] {
+    transition:
+      background-color 350ms var(--ease),
+      border-color 350ms var(--ease),
+      color 350ms var(--ease);
   }
 
   ::selection {

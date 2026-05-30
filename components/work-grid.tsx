@@ -3,14 +3,20 @@
 import Link from "next/link";
 import { motion } from "motion/react";
 import { projects, type Project } from "@/lib/projects";
+import { t } from "@/lib/i18n";
+import { useI18n } from "./i18n-provider";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
 export function WorkGrid() {
+  const { d } = useI18n();
+
   return (
     <section id="work" className="px-6 pb-24 md:pb-32">
       <div className="mx-auto max-w-6xl">
-        <SectionLabel>Selected work</SectionLabel>
+        <h2 className="text-[13px] font-medium tracking-[-0.01em] text-ink-3">
+          {d.work.label}
+        </h2>
         <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-5">
           {projects.map((p, i) => (
             <ProjectCard key={p.slug} project={p} index={i} />
@@ -22,6 +28,9 @@ export function WorkGrid() {
 }
 
 function ProjectCard({ project, index }: { project: Project; index: number }) {
+  const { locale, d } = useI18n();
+  const hasUrl = !!project.url;
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 18 }}
@@ -31,7 +40,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
     >
       <Link
         href={`/work/${project.slug}`}
-        className="group relative block h-full rounded-3xl border border-border bg-elevated p-8 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-0.5 hover:border-border-strong hover:shadow-[var(--shadow-card-hover)] md:p-10"
+        className="group relative block h-full rounded-3xl border border-border bg-elevated p-8 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-0.5 hover:border-border-strong md:p-10"
         style={{ boxShadow: "var(--shadow-card)" }}
       >
         <div className="flex h-full flex-col">
@@ -41,36 +50,24 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
                 {project.name}
               </h3>
               <p className="mt-1.5 font-mono text-[12px] text-ink-3">
-                {project.year} · {project.role}
+                {project.year} · {t(project.role, locale)}
               </p>
             </div>
             <span
               aria-hidden
               className="mt-1.5 inline-flex size-8 shrink-0 items-center justify-center rounded-full border border-border text-ink-3 transition-all duration-500 group-hover:border-ink group-hover:text-ink"
             >
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 14 14"
-                fill="none"
-                className="transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-              >
-                <path
-                  d="M3 11L11 3M11 3H5M11 3V9"
-                  stroke="currentColor"
-                  strokeWidth="1.4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                <path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </span>
           </div>
 
           <p className="mt-6 text-[15px] leading-relaxed text-ink-2 md:mt-8">
-            {project.tagline}
+            {t(project.tagline, locale)}
           </p>
 
-          <div className="mt-auto flex flex-wrap gap-1.5 pt-8">
+          <div className="mt-auto flex flex-wrap items-center gap-1.5 pt-8">
             {project.stack.map((s) => (
               <span
                 key={s}
@@ -79,17 +76,15 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
                 {s}
               </span>
             ))}
+            {hasUrl && (
+              <span className="ml-auto inline-flex items-center gap-1.5 font-mono text-[11px] text-ink-3">
+                <span className="size-1.5 rounded-full bg-[var(--color-accent)]" />
+                {d.work.live}
+              </span>
+            )}
           </div>
         </div>
       </Link>
     </motion.div>
-  );
-}
-
-function SectionLabel({ children }: { children: React.ReactNode }) {
-  return (
-    <h2 className="text-[13px] font-medium tracking-[-0.01em] text-ink-3">
-      {children}
-    </h2>
   );
 }

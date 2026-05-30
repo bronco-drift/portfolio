@@ -1,6 +1,11 @@
+"use client";
+
 import Link from "next/link";
+import { useI18n } from "./i18n-provider";
 
 export function SiteFooter() {
+  const { d } = useI18n();
+
   return (
     <footer className="border-t border-border">
       <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-3 px-6 py-8 text-[13px] text-ink-3 md:flex-row md:items-center">
@@ -9,7 +14,7 @@ export function SiteFooter() {
           href="#top"
           className="transition-colors hover:text-ink"
         >
-          Back to top ↑
+          {d.footer.backToTop} ↑
         </Link>
       </div>
     </footer>
