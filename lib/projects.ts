@@ -29,6 +29,11 @@ export type Project = {
   sections: ProjectSection[];
 };
 
+const designBuild: LocalizedString = {
+  en: "Design — Build",
+  es: "Diseño — Desarrollo",
+};
+
 export const projects: Project[] = [
   {
     slug: "prode-mundial-2026",
@@ -43,11 +48,9 @@ export const projects: Project[] = [
       es: "App de predicciones para la Copa del Mundo 2026 — multi-feature, colaborativa, con simulador paralelo y posiciones en vivo.",
     },
     year: "2026",
-    role: { en: "Design — Build", es: "Diseño — Desarrollo" },
+    role: designBuild,
     stack: ["HTML", "Firebase", "Vanilla JS"],
     status: "live",
-    url: undefined,
-    repo: undefined,
     screenshots: [],
     sections: [
       {
@@ -89,8 +92,6 @@ export const projects: Project[] = [
     role: { en: "Full-stack", es: "Full-stack" },
     stack: ["Next.js 16", "Supabase", "shadcn/ui", "Tailwind v4"],
     status: "in-progress",
-    url: undefined,
-    repo: undefined,
     screenshots: [],
     sections: [
       {
@@ -129,11 +130,9 @@ export const projects: Project[] = [
       es: "Un generador de rutinas que combina Gemini con una librería estructurada de movimientos. Vite + React 19 + Supabase.",
     },
     year: "2026",
-    role: { en: "Design — Build", es: "Diseño — Desarrollo" },
+    role: designBuild,
     stack: ["Vite", "React 19", "Gemini API", "Supabase"],
     status: "live",
-    url: undefined,
-    repo: undefined,
     screenshots: [],
     sections: [
       {
@@ -172,11 +171,9 @@ export const projects: Project[] = [
       es: "Mapas y CSV de los municipios de Venezuela. Estático primero, sin backend, UI cercana a Apple/Anthropic.",
     },
     year: "2026",
-    role: { en: "Design — Build", es: "Diseño — Desarrollo" },
+    role: designBuild,
     stack: ["Vite", "React 19", "Leaflet", "Zustand"],
     status: "live",
-    url: undefined,
-    repo: undefined,
     screenshots: [],
     sections: [
       {
@@ -198,6 +195,363 @@ export const projects: Project[] = [
         body: {
           en: "Live and embeddable. Designed to be quoted from, not curated through.",
           es: "En vivo y embebible. Diseñado para citarse, no para curarse.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "bronco-drift",
+    number: "05",
+    name: "Bronco Drift",
+    tagline: {
+      en: "Free, working apps under one roof.",
+      es: "Apps gratis y funcionales bajo un mismo techo.",
+    },
+    description: {
+      en: "Landing/hub for the small apps published under the Bronco Drift handle.",
+      es: "Landing/hub para las pequeñas apps publicadas bajo el handle Bronco Drift.",
+    },
+    year: "2025",
+    role: designBuild,
+    stack: ["Vite", "React", "Vercel"],
+    status: "live",
+    url: "https://bronco-drift.vercel.app/",
+    screenshots: [],
+    sections: [
+      {
+        heading: "Brief",
+        body: {
+          en: "A directory + showcase for the working name's growing collection of small apps.",
+          es: "Un directorio + vidriera para la colección creciente de pequeñas apps bajo el handle.",
+        },
+      },
+      {
+        heading: "Approach",
+        body: {
+          en: "Vite + React, deployed on Vercel. Lean, self-contained, easy to extend as new apps ship.",
+          es: "Vite + React, desplegado en Vercel. Liviano, autocontenido, fácil de extender a medida que salen nuevas apps.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "vikings-txt",
+    number: "06",
+    name: "Vikings.TXT",
+    tagline: {
+      en: "A retro TXT mini-game, brought back from Python.",
+      es: "Un mini-juego TXT retro, traído de vuelta desde Python.",
+    },
+    description: {
+      en: "Text-based adventure originally built in Python, recreated for the browser with retro TXT visuals.",
+      es: "Aventura basada en texto originalmente hecha en Python, recreada en el navegador con visuales TXT retro.",
+    },
+    year: "2024",
+    role: designBuild,
+    stack: ["HTML", "CSS", "JavaScript"],
+    status: "live",
+    url: "https://vikings-jade.vercel.app/",
+    screenshots: [],
+    sections: [
+      {
+        heading: "Brief",
+        body: {
+          en: "Bring an old Python mini-game I made years ago back to life — in the browser, with the retro look intact.",
+          es: "Resucitar un mini-juego en Python que hice hace años — ahora en el navegador, con la estética retro intacta.",
+        },
+      },
+      {
+        heading: "Approach",
+        body: {
+          en: "Pure HTML/CSS/JS recreating the TXT feel. Monospace type, terminal-style frames, intentional period aesthetic. Mechanics ported directly from the original.",
+          es: "HTML/CSS/JS puro recreando el feel TXT. Type monospace, marcos estilo terminal, estética de época intencional. Mecánicas portadas directo del original.",
+        },
+      },
+      {
+        heading: "Outcome",
+        body: {
+          en: "Playable in any browser.",
+          es: "Jugable en cualquier navegador.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "fuerzapp",
+    number: "07",
+    name: "FuerzAPP",
+    tagline: {
+      en: "A no-friction workout logger.",
+      es: "Un registro de entrenamientos sin fricción.",
+    },
+    description: {
+      en: "Training log focused on speed of entry and clear progress views.",
+      es: "Registro de entrenamientos enfocado en velocidad de carga y vistas de progreso claras.",
+    },
+    year: "2024",
+    role: designBuild,
+    stack: ["HTML", "JavaScript", "PWA"],
+    status: "live",
+    url: "https://fuerzapp3c.netlify.app/",
+    screenshots: [],
+    sections: [
+      {
+        heading: "Brief",
+        body: {
+          en: "Log a workout in the time it takes to drink a sip of water between sets.",
+          es: "Registrar un entrenamiento en lo que tardás en tomar un trago de agua entre series.",
+        },
+      },
+      {
+        heading: "Approach",
+        body: {
+          en: "One-thumb logging, big tap targets, minimal navigation. Designed for use mid-set, not between sessions.",
+          es: "Registro a un solo pulgar, áreas de tap grandes, navegación mínima. Diseñado para usar en plena serie, no entre sesiones.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "bookmark-studio",
+    number: "08",
+    name: "Bookmark Studio",
+    tagline: {
+      en: "Design and print custom double-sided bookmarks.",
+      es: "Diseñá e imprimí marcapáginas a doble cara, listos para cortar.",
+    },
+    description: {
+      en: "PWA for designing and printing double-sided bookmarks with precise alignment and cut guides.",
+      es: "PWA para diseñar e imprimir marcapáginas a doble cara con alineación precisa y guías de corte.",
+    },
+    year: "2025",
+    role: designBuild,
+    stack: ["HTML", "JavaScript", "PWA"],
+    status: "live",
+    url: "https://bookmarkstudio.netlify.app/",
+    screenshots: [],
+    sections: [
+      {
+        heading: "Brief",
+        body: {
+          en: "A tool to design, lay out, and print custom double-sided bookmarks — with cut guides and impeccable front-back alignment.",
+          es: "Una herramienta para diseñar, maquetar e imprimir marcapáginas a doble cara — con guías de corte y alineación impecable entre frente y dorso.",
+        },
+      },
+      {
+        heading: "Approach",
+        body: {
+          en: "Browser-side PWA. Drop in images, type captions, hit print. Works offline; nothing leaves the device.",
+          es: "PWA client-side. Arrastrás imágenes, escribís captions, imprimís. Funciona offline; nada sale del dispositivo.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "tog-tandem-reader",
+    number: "09",
+    name: "Throne of Glass — Tandem Reader",
+    tagline: {
+      en: "Reading-order tracker for the Throne of Glass tandem read.",
+      es: "Tracker del orden de lectura tandem de Throne of Glass.",
+    },
+    description: {
+      en: "Progress tracker for reading the Throne of Glass series in tandem — interleaving chapters across books in the right order.",
+      es: "Tracker de progreso para leer la saga Throne of Glass en tandem — intercalando capítulos entre libros en el orden correcto.",
+    },
+    year: "2024",
+    role: designBuild,
+    stack: ["HTML", "JavaScript"],
+    status: "live",
+    url: "https://zingy-eclair-ec9466.netlify.app/",
+    screenshots: [],
+    sections: [
+      {
+        heading: "Brief",
+        body: {
+          en: "Make the tandem reading order of the Throne of Glass series legible and trackable — without printing a chart.",
+          es: "Hacer legible y trackeable el orden tandem de lectura de la saga Throne of Glass — sin imprimir un cuadro.",
+        },
+      },
+      {
+        heading: "Approach",
+        body: {
+          en: "Static reading list with progress state. One tap per chapter. Saves locally; no account, no sync.",
+          es: "Lista estática de lectura con estado de progreso. Un tap por capítulo. Guarda local; sin cuenta, sin sync.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "rally-aesthetic",
+    number: "10",
+    name: "Rally Aesthetic",
+    tagline: {
+      en: "A rally-inspired aesthetic experiment, still in beta.",
+      es: "Un experimento estético inspirado en rally, todavía en beta.",
+    },
+    description: {
+      en: "HTML playground exploring rally racing aesthetics — type, color, motion.",
+      es: "Playground HTML explorando estética de rally — type, color, motion.",
+    },
+    year: "2026",
+    role: designBuild,
+    stack: ["HTML", "CSS"],
+    status: "in-progress",
+    url: "https://jolly-stardust-0d4ce7.netlify.app/",
+    screenshots: [],
+    sections: [
+      {
+        heading: "Brief",
+        body: {
+          en: "A visual experiment around rally racing tropes — type, color, motion — without committing to a product.",
+          es: "Un experimento visual alrededor de los tropos del rally — type, color, motion — sin comprometerse con un producto.",
+        },
+      },
+      {
+        heading: "Approach",
+        body: {
+          en: "Pure HTML/CSS, no framework. Iterating on the right balance between authentic and overwrought. Still in beta.",
+          es: "HTML/CSS puro, sin framework. Iterando el balance entre auténtico y excesivo. Todavía en beta.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "greekyogurt-ar",
+    number: "11",
+    name: "GreekYogurt.ar",
+    tagline: {
+      en: "Landing for a small-batch Greek yogurt brand in Buenos Aires.",
+      es: "Landing para una marca artesanal de yogur griego en Buenos Aires.",
+    },
+    description: {
+      en: "Brand landing — handmade in Buenos Aires, 100% natural, no preservatives.",
+      es: "Landing de marca — hecho a mano en Buenos Aires, 100% natural, sin conservantes.",
+    },
+    year: "2025",
+    role: designBuild,
+    stack: ["HTML", "CSS"],
+    status: "live",
+    url: "https://radiant-souffle-3ad212.netlify.app/",
+    screenshots: [],
+    sections: [
+      {
+        heading: "Brief",
+        body: {
+          en: "A landing page for a small-batch Greek yogurt brand. Handmade in Buenos Aires, 100% natural, no preservatives.",
+          es: "Una landing para una marca de yogur griego artesanal. Hecho a mano en Buenos Aires, 100% natural, sin conservantes.",
+        },
+      },
+      {
+        heading: "Approach",
+        body: {
+          en: "Product story above the fold. Clean type, warm photography, direct purchase path.",
+          es: "Historia de producto sobre el fold. Type limpia, fotografía cálida, camino directo a la compra.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "webstudio-argentina",
+    number: "12",
+    name: "WebStudio Argentina",
+    tagline: {
+      en: "A small studio shipping modern, fast websites.",
+      es: "Un estudio pequeño entregando sitios web modernos y rápidos.",
+    },
+    description: {
+      en: "Studio landing offering modern, fast web development for Argentine SMBs.",
+      es: "Landing del estudio ofreciendo desarrollo web moderno y rápido para PyMEs argentinas.",
+    },
+    year: "2024",
+    role: designBuild,
+    stack: ["HTML", "CSS"],
+    status: "live",
+    url: "https://webstudioargentina.netlify.app/",
+    screenshots: [],
+    sections: [
+      {
+        heading: "Brief",
+        body: {
+          en: "A landing for a small web studio shipping fast, modern sites.",
+          es: "Una landing para un pequeño estudio web que entrega sitios modernos y rápidos.",
+        },
+      },
+      {
+        heading: "Approach",
+        body: {
+          en: "Copy-led, clear tiers, built to convert. Lightweight by design.",
+          es: "Copy al frente, tiers claros, hecho para convertir. Liviano por diseño.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "mauro-barbershop",
+    number: "13",
+    name: "MAURO Barbershop",
+    tagline: {
+      en: "Brand and booking site for a premium Buenos Aires barbershop.",
+      es: "Branding y reservas para una barbería premium en Buenos Aires.",
+    },
+    description: {
+      en: "Web presence for MAURO — a Buenos Aires barbershop with two decades of cuts behind it.",
+      es: "Presencia web para MAURO — una barbería de Buenos Aires con dos décadas de cortes a cuestas.",
+    },
+    year: "2025",
+    role: designBuild,
+    stack: ["Next.js", "React"],
+    status: "live",
+    url: "https://statuesque-kulfi-e272b8.netlify.app/",
+    screenshots: [],
+    sections: [
+      {
+        heading: "Brief",
+        body: {
+          en: "A site that matches the chair: refined, confident, no fluff.",
+          es: "Un sitio a la altura del sillón: refinado, seguro, sin relleno.",
+        },
+      },
+      {
+        heading: "Approach",
+        body: {
+          en: "Clean type, strong portrait photography, simple booking flow. Built for a barbershop with two decades of cuts behind it.",
+          es: "Type limpia, fotografía de retrato fuerte, flujo de reserva simple. Hecho para una barbería con dos décadas de cortes a cuestas.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "laztana-bistro",
+    number: "14",
+    name: "Laztana Bistró",
+    tagline: {
+      en: "An intimate fine-dining bistro in Buenos Aires.",
+      es: "Un bistró íntimo de cocina de autor en Buenos Aires.",
+    },
+    description: {
+      en: "Restaurant site for Laztana — author-driven cuisine and reservations.",
+      es: "Sitio para Laztana — cocina de autor y reservas.",
+    },
+    year: "2025",
+    role: designBuild,
+    stack: ["HTML", "CSS", "JavaScript"],
+    status: "live",
+    url: "https://vocal-shortbread-6e441d.netlify.app/",
+    screenshots: [],
+    sections: [
+      {
+        heading: "Brief",
+        body: {
+          en: "A restaurant site that doesn't get in the way of 'book a table.'",
+          es: "Un sitio de restaurante que no se mete entre vos y 'reservar mesa'.",
+        },
+      },
+      {
+        heading: "Approach",
+        body: {
+          en: "Plate photography front and center, copy that gets out of the way, reservation a tap away.",
+          es: "Fotografía de platos al frente, copy que se hace a un lado, reserva a un tap de distancia.",
         },
       },
     ],
