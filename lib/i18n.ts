@@ -60,7 +60,7 @@ export const dict: Record<Locale, Dict> = {
     nav: { work: "Work", about: "About", contact: "Contact" },
     hero: {
       title: "Bronco Drift.",
-      body: "My projects — systems and pages with a feeling of their own.",
+      body: "Systems, processes and design with a feeling of their own.",
     },
     work: {
       label: "Projects",
@@ -145,7 +145,7 @@ export const dict: Record<Locale, Dict> = {
     nav: { work: "Trabajos", about: "Sobre", contact: "Contacto" },
     hero: {
       title: "Bronco Drift.",
-      body: "Mis proyectos — sistemas y páginas con un sentimiento propio.",
+      body: "Sistemas, procesos y diseño con un sentimiento propio.",
     },
     work: {
       label: "Proyectos",
