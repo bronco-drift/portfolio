@@ -162,8 +162,50 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "prode-mundial-2026",
+    slug: "misclientes",
     number: "04",
+    name: "misclientes",
+    tagline: {
+      en: "A two-in-one PWA: LATAM dollar rates + a personal tools stack.",
+      es: "Una PWA dos-en-uno: cotización del dólar en LATAM + un stack propio de herramientas.",
+    },
+    description: {
+      en: "Landing for LATAM dollar rates (AR + VE) with a growing bench of personal tools: CRM, expenses, subscriptions, PTO planner, habits, kanban, and games.",
+      es: "Landing de cotizaciones del dólar en LATAM (AR + VE) con un banco creciente de herramientas personales: CRM, gastos, suscripciones, planner de PTO, hábitos, kanban y juegos.",
+    },
+    year: "2026",
+    role: designBuild,
+    stack: ["Vite", "React 19", "TypeScript", "PWA"],
+    status: "live",
+    url: "https://misclientes.vercel.app/",
+    screenshots: [],
+    sections: [
+      {
+        heading: "Brief",
+        body: {
+          en: "A practice project for backend and frontend chops that ended up as a daily driver — dollar rates on top, a growing bench of personal tools underneath.",
+          es: "Un proyecto de práctica para backend y frontend que terminó siendo de uso diario — cotizaciones del dólar arriba, un banco creciente de herramientas personales abajo.",
+        },
+      },
+      {
+        heading: "Approach",
+        body: {
+          en: "Vite + React 19 + TypeScript, PWA with safe areas and offline. All state in localStorage; module-frontier files (storage.ts, cotizaciones.ts) let the future backend swap in without touching views. Structured by domain, not tech.",
+          es: "Vite + React 19 + TypeScript, PWA con safe areas y offline. Todo el estado en localStorage; archivos frontera (storage.ts, cotizaciones.ts) dejan que el backend futuro entre sin tocar las vistas. Estructurado por dominio, no por tecnología.",
+        },
+      },
+      {
+        heading: "Outcome",
+        body: {
+          en: "In production. Eight tools shipped and in daily use.",
+          es: "En producción. Ocho herramientas lanzadas y en uso diario.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "prode-mundial-2026",
+    number: "05",
     name: "Prode Mundial 2026",
     tagline: {
       en: "A collaborative ritual for the world's most-watched tournament.",
@@ -205,7 +247,7 @@ export const projects: Project[] = [
   },
   {
     slug: "mauro-barbershop",
-    number: "05",
+    number: "06",
     name: "MAURO Barbershop",
     tagline: {
       en: "Brand and booking site for a premium Buenos Aires barbershop.",
@@ -240,7 +282,7 @@ export const projects: Project[] = [
   },
   {
     slug: "laztana-bistro",
-    number: "06",
+    number: "07",
     name: "Laztana Bistró",
     tagline: {
       en: "An intimate fine-dining bistro in Buenos Aires.",
@@ -275,7 +317,7 @@ export const projects: Project[] = [
   },
   {
     slug: "verduras-ar",
-    number: "07",
+    number: "08",
     name: "verduras.ar",
     tagline: {
       en: "Fresh produce and pantry, delivered.",
@@ -309,8 +351,43 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: "izifud",
+    number: "09",
+    name: "IZIFUD",
+    tagline: {
+      en: "A B2B food-ordering platform — for the platform, not the restaurant.",
+      es: "Plataforma B2B de pedidos de restaurantes — para la plataforma, no para el local.",
+    },
+    description: {
+      en: "Multi-tenant food ordering with four roles (customer, partner, admin, rider), multi-country (AR + VE), non-fiscal receipts, and no payment gateway — cash and Pago Móvil / transfer verified by the partner.",
+      es: "Pedidos multi-tenant con cuatro roles (cliente, socio, admin, rider), multi-país (AR + VE), comprobantes no fiscales y sin pasarela de pago — efectivo y Pago Móvil / transferencia verificados por el socio.",
+    },
+    year: "2026",
+    role: designBuild,
+    stack: ["HTML", "JavaScript", "PWA", "Leaflet"],
+    status: "in-progress",
+    url: "https://verduleria-git-comida-bronco-drift.vercel.app/",
+    screenshots: [],
+    sections: [
+      {
+        heading: "Brief",
+        body: {
+          en: "The platform is the product — restaurants are B2B customers. Design for a market where card payments are rare and cash or Pago Móvil dominate.",
+          es: "La plataforma es el producto — los restaurantes son clientes B2B. Diseñado para un mercado donde la tarjeta es rara y manda el efectivo o el Pago Móvil.",
+        },
+      },
+      {
+        heading: "Approach",
+        body: {
+          en: "HTML-first, single-file frontend continuing the verduras.ar codebase. Role bar with impersonation for dev, live map deliveries with Leaflet + Nominatim, per-partner exchange rates frozen at order time.",
+          es: "HTML-first, frontend en un solo archivo continuando el código de verduras.ar. Barra de rol con impersonación para dev, entregas con mapa vivo (Leaflet + Nominatim), tasas de cambio por socio congeladas al momento del pedido.",
+        },
+      },
+    ],
+  },
+  {
     slug: "greekyogurt-ar",
-    number: "08",
+    number: "10",
     name: "GreekYogurt.ar",
     tagline: {
       en: "Landing for a small-batch Greek yogurt brand in Buenos Aires.",
@@ -345,7 +422,7 @@ export const projects: Project[] = [
   },
   {
     slug: "bronco-drift",
-    number: "09",
+    number: "11",
     name: "Bronco Drift",
     tagline: {
       en: "Free, working apps under one roof.",
@@ -379,8 +456,76 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: "la-guia",
+    number: "12",
+    name: "La Guía",
+    tagline: {
+      en: "A working guide to building webapps with Claude.",
+      es: "Una guía viva para construir webapps con Claude.",
+    },
+    description: {
+      en: "Method guides with two views over the same content and progress — Steps (revealed as you complete) and Document (full read with anchored index).",
+      es: "Guías del método con dos vistas sobre el mismo contenido y progreso — Pasos (se van revelando al completar) y Documento (lectura completa con índice anclado).",
+    },
+    year: "2026",
+    role: designBuild,
+    stack: ["Vite", "React 19", "PWA"],
+    status: "in-progress",
+    screenshots: [],
+    sections: [
+      {
+        heading: "Brief",
+        body: {
+          en: "Turn the method I use to build small webapps with Claude into a set of guides someone else can follow.",
+          es: "Convertir el método que uso para construir webapps chicas con Claude en un set de guías que otra persona pueda seguir.",
+        },
+      },
+      {
+        heading: "Approach",
+        body: {
+          en: "Single source of truth in guias.js — the same steps feed both the Steps and Document views. PWA with local progress, toggle between editorial and system typography. AssistiveTouch and Dynamic Island easter eggs for iPhone.",
+          es: "Fuente única de verdad en guias.js — los mismos pasos alimentan las vistas Pasos y Documento. PWA con progreso local, toggle entre tipografía editorial y sistema. Easter eggs de AssistiveTouch y Dynamic Island para iPhone.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "banco-api",
+    number: "13",
+    name: "Banco API",
+    tagline: {
+      en: "A visual sandbox for API integrations — to learn and to teach.",
+      es: "Un sandbox visual de integraciones API — para aprender y para enseñar.",
+    },
+    description: {
+      en: "Interactive canvas with two configurable systems and a signal traveling between them. Two modes: a single request, or hourly sync with delta and matching key.",
+      es: "Canvas interactivo con dos sistemas configurables y una señal que viaja entre ellos. Dos modos: un pedido suelto, o sincronización por hora con delta y clave de coincidencia.",
+    },
+    year: "2026",
+    role: designBuild,
+    stack: ["HTML", "JavaScript"],
+    status: "in-progress",
+    screenshots: [],
+    sections: [
+      {
+        heading: "Brief",
+        body: {
+          en: "Explain API integrations visually — HTTP methods, timeouts, credentials, upserts, and the two aha moments (timeout with a duplicate saved on the other side; matching by name instead of id).",
+          es: "Explicar integraciones API de forma visual — métodos HTTP, timeouts, credenciales, upserts, y los dos aha (timeout con duplicado guardado del otro lado; coincidir por nombre en vez de por id).",
+        },
+      },
+      {
+        heading: "Approach",
+        body: {
+          en: "Simple by default, deep if you open it. Single HTML file, no dependencies. Scenarios one click away, fine controls tucked into <details>. Optional middleware as a third box, off by default.",
+          es: "Simple por default, profundo si lo abrís. Un solo archivo HTML, sin dependencias. Escenarios a un clic, controles finos en <details>. Middleware opcional como tercera caja, apagado por default.",
+        },
+      },
+    ],
+  },
+  {
     slug: "fuerzapp",
-    number: "10",
+    number: "14",
     name: "FuerzAPP",
     tagline: {
       en: "A no-friction workout logger.",
@@ -415,7 +560,7 @@ export const projects: Project[] = [
   },
   {
     slug: "bookmark-studio",
-    number: "11",
+    number: "15",
     name: "Bookmark Studio",
     tagline: {
       en: "Design and print custom double-sided bookmarks.",
@@ -450,7 +595,7 @@ export const projects: Project[] = [
   },
   {
     slug: "tog-tandem-reader",
-    number: "12",
+    number: "16",
     name: "Throne of Glass — Tandem Reader",
     tagline: {
       en: "Reading-order tracker for the Throne of Glass tandem read.",
@@ -484,8 +629,110 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: "mi-server",
+    number: "17",
+    name: "mi-server",
+    tagline: {
+      en: "A home server for moving files between phone and PC.",
+      es: "Un server casero para mover archivos entre teléfono y PC.",
+    },
+    description: {
+      en: "Zero-dependency Node server with PIN login, session persistence, LAN + ssh tunnel access, PWA, and a chat channel for cross-device messages.",
+      es: "Server Node cero-deps con login PIN, sesiones persistentes, acceso LAN + túnel ssh, PWA y canal de chat para mensajes entre dispositivos.",
+    },
+    year: "2026",
+    role: designBuild,
+    stack: ["Node", "PWA"],
+    status: "live",
+    screenshots: [],
+    sections: [
+      {
+        heading: "Brief",
+        body: {
+          en: "My first server — files between phone and PC, no third-party app, no cloud, my rules.",
+          es: "Mi primer server — archivos entre teléfono y PC, sin app de terceros, sin nube, mis reglas.",
+        },
+      },
+      {
+        heading: "Approach",
+        body: {
+          en: "Node with zero dependencies, port 4200 on LAN. The ssh that ships with Windows handles the tunnel to localhost.run — no need for Tailscale. PIN in a text file, sessions in JSON to survive reloads, PWA installable on the phone.",
+          es: "Node sin dependencias, puerto 4200 en LAN. El ssh que viene con Windows maneja el túnel a localhost.run — no hace falta Tailscale. PIN en un archivo de texto, sesiones en JSON para sobrevivir a los reloads, PWA instalable en el teléfono.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "arcade-coop",
+    number: "18",
+    name: "Arcade Coop",
+    tagline: {
+      en: "A 2-player arcade portal on the way to 100 games.",
+      es: "Un portal arcade 2 jugadores rumbo a 100 juegos.",
+    },
+    description: {
+      en: "Growing catalog of 2-player arcade games — coop and 1v1, gamepad or keyboard, retro CRT aesthetic. Currently 49/100.",
+      es: "Catálogo creciente de juegos arcade para 2 — coop y 1v1, con gamepad o teclado, estética CRT retro. Van 49/100.",
+    },
+    year: "2026",
+    role: designBuild,
+    stack: ["HTML", "Canvas", "Three.js", "Gamepad API"],
+    status: "in-progress",
+    screenshots: [],
+    sections: [
+      {
+        heading: "Brief",
+        body: {
+          en: "A living arcade for the couch — one shared TV, two players, dozens of quick games. Playable with Bluetooth gamepads or keyboard.",
+          es: "Un arcade vivo para el sillón — una TV compartida, dos jugadores, decenas de juegos cortos. Se juega con gamepads Bluetooth o teclado.",
+        },
+      },
+      {
+        heading: "Approach",
+        body: {
+          en: "HTML static, no build. catalogo.js as the single source of truth. A shared lib/arcade.js handles pad slot assignment (by button press, not index — Windows exposes phantom pads at low indices), zoom for 4K TVs, pause menu, and a stats + audit toolchain that watches all 49 games without touching them.",
+          es: "HTML estático, sin build. catalogo.js como única fuente de verdad. Una lib/arcade.js compartida hace la asignación de pads (por botonazo, no por índice — Windows expone pads fantasma en índices bajos), zoom para TVs 4K, menú de pausa, y un toolchain de stats + auditoría que mira los 49 juegos sin tocarlos.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "xavo-kobrax",
+    number: "19",
+    name: "Xavo y Kobrax",
+    tagline: {
+      en: "A soccer-flavored platformer, Mario-style, from potrero to Europe.",
+      es: "Un plataformas futbolero estilo Mario clásico, del potrero a Europa.",
+    },
+    description: {
+      en: "Data-driven platformer with 1P, 2P turns, and 2P coop modes. Signature power: the ball-boomerang.",
+      es: "Plataformas data-driven con modos 1P, 2P turnos y 2P coop. Poder estrella: la pelota-boomerang.",
+    },
+    year: "2026",
+    role: designBuild,
+    stack: ["Vanilla JS", "Canvas", "PWA"],
+    status: "in-progress",
+    screenshots: [],
+    sections: [
+      {
+        heading: "Brief",
+        body: {
+          en: "Two friends from Lanús chase a career from the potrero to Europe. Small canvas game — Vanilla JS + Canvas 320×192, no dependencies, PWA installable.",
+          es: "Dos amigos de Lanús persiguen la carrera del potrero a Europa. Juego chico — Vanilla JS + Canvas 320×192, sin dependencias, PWA instalable.",
+        },
+      },
+      {
+        heading: "Approach",
+        body: {
+          en: "Data-driven: config.js for physics, powers, characters, and worlds; levels.js as 12-row ASCII maps with a legend. Level design rules verified empirically with a JS bot doing lookahead. World bank starts with Argentina (4 levels) and Italy (2).",
+          es: "Data-driven: config.js para física, poderes, personajes y mundos; levels.js como mapas ASCII de 12 filas con leyenda. Reglas de diseño de niveles verificadas empíricamente con un bot en JS haciendo lookahead. El banco de mundos arranca con Argentina (4 niveles) e Italia (2).",
+        },
+      },
+    ],
+  },
+  {
     slug: "vikings-txt",
-    number: "13",
+    number: "20",
     name: "Vikings.TXT",
     tagline: {
       en: "A retro TXT mini-game, brought back from Python.",
@@ -527,7 +774,7 @@ export const projects: Project[] = [
   },
   {
     slug: "rally-aesthetic",
-    number: "14",
+    number: "21",
     name: "Rally Aesthetic",
     tagline: {
       en: "A rally-inspired aesthetic experiment, still in beta.",
@@ -562,7 +809,7 @@ export const projects: Project[] = [
   },
   {
     slug: "webstudio-argentina",
-    number: "15",
+    number: "22",
     name: "WebStudio Argentina",
     tagline: {
       en: "A small studio shipping modern, fast websites.",

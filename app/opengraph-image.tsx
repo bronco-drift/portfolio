@@ -1,10 +1,12 @@
 import { ImageResponse } from "next/og";
+import { projects } from "@/lib/projects";
 
 export const alt = "Bronco Drift — independent web work";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default async function Image() {
+  const count = projects.length;
   return new ImageResponse(
     (
       <div
@@ -75,7 +77,7 @@ export default async function Image() {
               display: "flex",
             }}
           />
-          <span>15 projects</span>
+          <span>{count} projects</span>
         </div>
       </div>
     ),
