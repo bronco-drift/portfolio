@@ -12,7 +12,21 @@ export function t(value: LocalizedString, locale: Locale = defaultLocale): strin
 export type Dict = {
   nav: { work: string; about: string; contact: string };
   hero: { title: string; body: string };
-  work: { label: string; live: string };
+  work: {
+    label: string;
+    live: string;
+    sortLabel: string;
+    sortFeatured: string;
+    sortLevel: string;
+    sortCategory: string;
+    categories: {
+      apps: string;
+      client: string;
+      tools: string;
+      games: string;
+      experiments: string;
+    };
+  };
   about: { label: string; p1: string; p2: string };
   contact: { label: string; title: string; email: string; github: string };
   faq: { label: string; nav: string; intro: string; backHome: string };
@@ -41,6 +55,17 @@ export const dict: Record<Locale, Dict> = {
     work: {
       label: "Selected work",
       live: "Live",
+      sortLabel: "Sort by",
+      sortFeatured: "Featured",
+      sortLevel: "Level",
+      sortCategory: "Category",
+      categories: {
+        apps: "Apps & products",
+        client: "Client work",
+        tools: "Tools & utilities",
+        games: "Games",
+        experiments: "Experiments",
+      },
     },
     about: {
       label: "About",
@@ -103,6 +128,17 @@ export const dict: Record<Locale, Dict> = {
     work: {
       label: "Trabajos seleccionados",
       live: "En vivo",
+      sortLabel: "Ordenar por",
+      sortFeatured: "Destacados",
+      sortLevel: "Nivel",
+      sortCategory: "Categoría",
+      categories: {
+        apps: "Apps y productos",
+        client: "Trabajos para clientes",
+        tools: "Herramientas",
+        games: "Juegos",
+        experiments: "Experimentos",
+      },
     },
     about: {
       label: "Sobre",

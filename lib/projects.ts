@@ -2,6 +2,23 @@ import type { LocalizedString } from "./i18n";
 
 export type ProjectStatus = "live" | "in-progress" | "archived";
 
+export type ProjectCategory =
+  | "apps"
+  | "client"
+  | "tools"
+  | "games"
+  | "experiments";
+
+export type ProjectLevel = 1 | 2 | 3 | 4 | 5;
+
+export const CATEGORY_ORDER: ProjectCategory[] = [
+  "apps",
+  "client",
+  "tools",
+  "games",
+  "experiments",
+];
+
 export type ProjectSection = {
   heading: string;
   body: LocalizedString;
@@ -23,6 +40,8 @@ export type Project = {
   role: LocalizedString;
   stack: string[];
   status: ProjectStatus;
+  level: ProjectLevel;
+  category: ProjectCategory;
   url?: string;
   repo?: string;
   embed?: string;
@@ -39,6 +58,8 @@ export const projects: Project[] = [
   {
     slug: "lumina",
     number: "01",
+    level: 5,
+    category: "apps",
     name: "Lumina",
     tagline: {
       en: "Appointment booking, distilled.",
@@ -81,6 +102,8 @@ export const projects: Project[] = [
   {
     slug: "mapitas",
     number: "02",
+    level: 4,
+    category: "apps",
     name: "Mapitas",
     tagline: {
       en: "Venezuela's territory, made legible.",
@@ -123,6 +146,8 @@ export const projects: Project[] = [
   {
     slug: "optimal-routine-builder",
     number: "03",
+    level: 5,
+    category: "apps",
     name: "Optimal Routine Builder",
     tagline: {
       en: "AI-tailored training, end-to-end.",
@@ -165,6 +190,8 @@ export const projects: Project[] = [
   {
     slug: "misclientes",
     number: "04",
+    level: 5,
+    category: "apps",
     name: "misclientes",
     tagline: {
       en: "A two-in-one PWA: LATAM dollar rates + a personal tools stack.",
@@ -207,6 +234,8 @@ export const projects: Project[] = [
   {
     slug: "prode-mundial-2026",
     number: "05",
+    level: 4,
+    category: "apps",
     name: "Prode Mundial 2026",
     tagline: {
       en: "A collaborative ritual for the world's most-watched tournament.",
@@ -249,6 +278,8 @@ export const projects: Project[] = [
   {
     slug: "mauro-barbershop",
     number: "06",
+    level: 3,
+    category: "client",
     name: "MAURO Barbershop",
     tagline: {
       en: "Brand and booking site for a premium Buenos Aires barbershop.",
@@ -284,6 +315,8 @@ export const projects: Project[] = [
   {
     slug: "laztana-bistro",
     number: "07",
+    level: 2,
+    category: "client",
     name: "Laztana Bistró",
     tagline: {
       en: "An intimate fine-dining bistro in Buenos Aires.",
@@ -319,6 +352,8 @@ export const projects: Project[] = [
   {
     slug: "verduras-ar",
     number: "08",
+    level: 4,
+    category: "apps",
     name: "verduras.ar",
     tagline: {
       en: "Fresh produce and pantry, delivered.",
@@ -354,6 +389,8 @@ export const projects: Project[] = [
   {
     slug: "izifud",
     number: "09",
+    level: 5,
+    category: "apps",
     name: "IZIFUD",
     tagline: {
       en: "A B2B food-ordering platform — for the platform, not the restaurant.",
@@ -389,6 +426,8 @@ export const projects: Project[] = [
   {
     slug: "greekyogurt-ar",
     number: "10",
+    level: 2,
+    category: "client",
     name: "GreekYogurt.ar",
     tagline: {
       en: "Landing for a small-batch Greek yogurt brand in Buenos Aires.",
@@ -424,6 +463,8 @@ export const projects: Project[] = [
   {
     slug: "bronco-drift",
     number: "11",
+    level: 3,
+    category: "tools",
     name: "Bronco Drift",
     tagline: {
       en: "Free, working apps under one roof.",
@@ -459,6 +500,8 @@ export const projects: Project[] = [
   {
     slug: "la-guia",
     number: "12",
+    level: 4,
+    category: "tools",
     name: "La Guía",
     tagline: {
       en: "A working guide to building webapps with Claude.",
@@ -493,6 +536,8 @@ export const projects: Project[] = [
   {
     slug: "banco-api",
     number: "13",
+    level: 3,
+    category: "tools",
     name: "Banco API",
     tagline: {
       en: "A visual sandbox for API integrations — to learn and to teach.",
@@ -527,6 +572,8 @@ export const projects: Project[] = [
   {
     slug: "fuerzapp",
     number: "14",
+    level: 3,
+    category: "tools",
     name: "FuerzAPP",
     tagline: {
       en: "A no-friction workout logger.",
@@ -562,6 +609,8 @@ export const projects: Project[] = [
   {
     slug: "bookmark-studio",
     number: "15",
+    level: 3,
+    category: "tools",
     name: "Bookmark Studio",
     tagline: {
       en: "Design and print custom double-sided bookmarks.",
@@ -597,6 +646,8 @@ export const projects: Project[] = [
   {
     slug: "tog-tandem-reader",
     number: "16",
+    level: 2,
+    category: "tools",
     name: "Throne of Glass — Tandem Reader",
     tagline: {
       en: "Reading-order tracker for the Throne of Glass tandem read.",
@@ -632,6 +683,8 @@ export const projects: Project[] = [
   {
     slug: "mi-server",
     number: "17",
+    level: 4,
+    category: "tools",
     name: "mi-server",
     tagline: {
       en: "A home server for moving files between phone and PC.",
@@ -666,6 +719,8 @@ export const projects: Project[] = [
   {
     slug: "arcade-coop",
     number: "18",
+    level: 5,
+    category: "games",
     name: "Arcade Coop",
     tagline: {
       en: "A 2-player arcade portal on the way to 100 games.",
@@ -700,6 +755,8 @@ export const projects: Project[] = [
   {
     slug: "xavo-kobrax",
     number: "19",
+    level: 4,
+    category: "games",
     name: "Xavo y Kobrax",
     tagline: {
       en: "A soccer-flavored platformer, Mario-style, from potrero to Europe.",
@@ -734,6 +791,8 @@ export const projects: Project[] = [
   {
     slug: "bouncing-balls",
     number: "20",
+    level: 3,
+    category: "games",
     name: "Bouncing Balls",
     embed: "/embeds/bouncing-balls.html",
     tagline: {
@@ -769,6 +828,8 @@ export const projects: Project[] = [
   {
     slug: "vikings-txt",
     number: "21",
+    level: 2,
+    category: "games",
     name: "Vikings.TXT",
     tagline: {
       en: "A retro TXT mini-game, brought back from Python.",
@@ -811,6 +872,8 @@ export const projects: Project[] = [
   {
     slug: "rally-aesthetic",
     number: "22",
+    level: 2,
+    category: "experiments",
     name: "Rally Aesthetic",
     tagline: {
       en: "A rally-inspired aesthetic experiment, still in beta.",
@@ -846,6 +909,8 @@ export const projects: Project[] = [
   {
     slug: "webstudio-argentina",
     number: "23",
+    level: 2,
+    category: "client",
     name: "WebStudio Argentina",
     tagline: {
       en: "A small studio shipping modern, fast websites.",
