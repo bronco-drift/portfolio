@@ -60,10 +60,10 @@ export const dict: Record<Locale, Dict> = {
     nav: { work: "Work", about: "About", contact: "Contact" },
     hero: {
       title: "Bronco Drift.",
-      body: "Systems and pages built with care — made to add value and carry a feeling of their own. A selection below.",
+      body: "My projects — systems and pages with a feeling of their own.",
     },
     work: {
-      label: "Selected work",
+      label: "Projects",
       live: "Live",
       sortLabel: "Sort by",
       sortFeatured: "Featured",
@@ -79,8 +79,8 @@ export const dict: Record<Locale, Dict> = {
     },
     about: {
       label: "About",
-      p1: "Bronco Drift is the name I design and build under. Systems and pages built to add value, with a feeling of their own in the interface — cleanliness, air, hierarchy drawn by typography rather than color.",
-      p2: "I work across the stack — React, Next.js, Supabase, Firebase — and lean toward projects that pick clarity over cleverness. Every one of them ships with the same rule: readable, durable, light.",
+      p1: "Bronco Drift builds systems and pages with a feeling of their own. Interfaces that add value without decoration for its own sake — cleanliness, air, hierarchy drawn by typography rather than color.",
+      p2: "Stack: React, Next.js, Supabase, Firebase. Every project ships with the same rule — readable, durable, light.",
     },
     contact: {
       label: "Contact",
@@ -145,10 +145,10 @@ export const dict: Record<Locale, Dict> = {
     nav: { work: "Trabajos", about: "Sobre", contact: "Contacto" },
     hero: {
       title: "Bronco Drift.",
-      body: "Sistemas y páginas hechos con cuidado — pensados para aportar valor y con un sentimiento propio. Abajo, una selección.",
+      body: "Mis proyectos — sistemas y páginas con un sentimiento propio.",
     },
     work: {
-      label: "Trabajos seleccionados",
+      label: "Proyectos",
       live: "En vivo",
       sortLabel: "Ordenar por",
       sortFeatured: "Destacados",
@@ -164,8 +164,8 @@ export const dict: Record<Locale, Dict> = {
     },
     about: {
       label: "Sobre",
-      p1: "Bronco Drift es el nombre bajo el que diseño y construyo. Sistemas y páginas pensados para aportar valor, con un sentimiento propio en la interfaz — limpieza, aire, jerarquía puesta por la tipografía y no por el color.",
-      p2: "Trabajo con todo el stack — React, Next.js, Supabase, Firebase — y me llevo mejor con los proyectos que eligen ser claros antes que ingeniosos. Cada uno sale con el mismo criterio: que se entienda, que dure, que no pese.",
+      p1: "Bronco Drift construye sistemas y páginas con un sentimiento propio. Interfaces que aportan valor sin decoración de más — limpieza, aire, jerarquía por tipografía y no por color.",
+      p2: "Stack: React, Next.js, Supabase, Firebase. Cada proyecto sale con el mismo criterio — que se entienda, que dure, que no pese.",
     },
     contact: {
       label: "Contacto",
