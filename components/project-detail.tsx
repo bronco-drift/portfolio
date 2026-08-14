@@ -5,6 +5,7 @@ import { motion } from "motion/react";
 import { t } from "@/lib/i18n";
 import { useI18n } from "./i18n-provider";
 import { ProjectGallery } from "./project-gallery";
+import { ProjectEmbed } from "./project-embed";
 import type { Project } from "@/lib/projects";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
@@ -118,6 +119,12 @@ export function ProjectDetail({
                 </p>
               </div>
             ))}
+
+            {project.embed && (
+              <div className="pt-4">
+                <ProjectEmbed src={project.embed} title={project.name} />
+              </div>
+            )}
 
             {project.screenshots && project.screenshots.length > 0 && (
               <div className="pt-4">

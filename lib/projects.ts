@@ -25,6 +25,7 @@ export type Project = {
   status: ProjectStatus;
   url?: string;
   repo?: string;
+  embed?: string;
   screenshots?: Screenshot[];
   sections: ProjectSection[];
 };
@@ -734,6 +735,7 @@ export const projects: Project[] = [
     slug: "bouncing-balls",
     number: "20",
     name: "Bouncing Balls",
+    embed: "/embeds/bouncing-balls.html",
     tagline: {
       en: "A physics playground for bouncing balls, with knobs and a benchmark mode.",
       es: "Un playground físico de pelotas rebotando, con perillas y modo experimento.",

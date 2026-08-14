@@ -22,6 +22,8 @@ export type Dict = {
     visitLive: string;
     viewSource: string;
     nextProject: string;
+    embedLabel: string;
+    embedHint: string;
     sections: Record<string, string>;
   };
   notFound: { label: string; title: string; body: string; back: string };
@@ -66,6 +68,8 @@ export const dict: Record<Locale, Dict> = {
       visitLive: "Visit live",
       viewSource: "Source",
       nextProject: "Next project",
+      embedLabel: "Live demo",
+      embedHint: "Playable here — click into the frame to interact.",
       sections: {
         Brief: "Brief",
         Approach: "Approach",
@@ -126,6 +130,8 @@ export const dict: Record<Locale, Dict> = {
       visitLive: "Ir al sitio",
       viewSource: "Código",
       nextProject: "Siguiente proyecto",
+      embedLabel: "Demo en vivo",
+      embedHint: "Se juega acá — tocá adentro del marco para interactuar.",
       sections: {
         Brief: "Resumen",
         Approach: "Enfoque",
