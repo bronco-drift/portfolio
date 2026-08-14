@@ -42,6 +42,7 @@ export type Project = {
   status: ProjectStatus;
   level: ProjectLevel;
   category: ProjectCategory;
+  luminaStyle?: boolean;
   url?: string;
   repo?: string;
   embed?: string;
@@ -60,6 +61,7 @@ export const projects: Project[] = [
     number: "01",
     level: 5,
     category: "apps",
+    luminaStyle: true,
     name: "Lumina",
     tagline: {
       en: "Appointment booking, distilled.",
@@ -104,6 +106,7 @@ export const projects: Project[] = [
     number: "02",
     level: 4,
     category: "apps",
+    luminaStyle: true,
     name: "Mapitas",
     tagline: {
       en: "Venezuela's territory, made legible.",
@@ -192,6 +195,7 @@ export const projects: Project[] = [
     number: "04",
     level: 5,
     category: "apps",
+    luminaStyle: true,
     name: "misclientes",
     tagline: {
       en: "A two-in-one PWA: LATAM dollar rates + a personal tools stack.",
@@ -391,6 +395,7 @@ export const projects: Project[] = [
     number: "09",
     level: 5,
     category: "apps",
+    luminaStyle: true,
     name: "IZIFUD",
     tagline: {
       en: "A B2B food-ordering platform — for the platform, not the restaurant.",
@@ -685,6 +690,7 @@ export const projects: Project[] = [
     number: "17",
     level: 4,
     category: "tools",
+    luminaStyle: true,
     name: "mi-server",
     tagline: {
       en: "A home server for moving files between phone and PC.",

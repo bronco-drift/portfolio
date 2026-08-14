@@ -12,6 +12,12 @@ export function SiteFooter() {
         <span>© 2026 Bronco Drift</span>
         <div className="flex items-center gap-6">
           <Link
+            href="/lumina"
+            className="transition-colors hover:text-ink"
+          >
+            {d.lumina.nav}
+          </Link>
+          <Link
             href="/faq"
             className="transition-colors hover:text-ink"
           >

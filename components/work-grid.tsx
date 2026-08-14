@@ -11,6 +11,7 @@ import {
 } from "@/lib/projects";
 import { t } from "@/lib/i18n";
 import { useI18n } from "./i18n-provider";
+import { LuminaCard } from "./lumina-card";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
@@ -49,6 +50,9 @@ export function WorkGrid() {
         <div className="mt-8">
           {mode === "category" && grouped ? (
             <div className="space-y-14 md:space-y-16">
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-5">
+                <LuminaCard />
+              </div>
               {grouped.map((g, gi) => (
                 <div key={g.category}>
                   <div className="mb-4 flex items-baseline justify-between">
@@ -79,9 +83,10 @@ export function WorkGrid() {
               layout
               className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-5"
             >
+              <LuminaCard key="lumina-card" index={0} />
               <AnimatePresence mode="popLayout">
                 {sortedFlat.map((p, i) => (
-                  <ProjectCard key={p.slug} project={p} index={i} />
+                  <ProjectCard key={p.slug} project={p} index={i + 1} />
                 ))}
               </AnimatePresence>
             </motion.div>

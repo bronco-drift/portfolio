@@ -103,6 +103,25 @@ export function ProjectDetail({
                   </span>
                 ))}
               </div>
+
+              {project.luminaStyle && (
+                <Link
+                  href="/lumina"
+                  className="group mt-6 inline-flex items-center gap-2 text-[13px] text-ink-3 transition-colors hover:text-ink"
+                >
+                  <span
+                    aria-hidden
+                    className="size-1.5 rounded-full bg-ink transition-transform duration-500 group-hover:scale-110"
+                  />
+                  {d.lumina.builtWith}
+                  <span
+                    aria-hidden
+                    className="transition-transform duration-500 group-hover:translate-x-0.5"
+                  >
+                    →
+                  </span>
+                </Link>
+              )}
             </motion.div>
           </div>
         </header>

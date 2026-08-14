@@ -14,10 +14,12 @@ export function Contact() {
         <h2 className="text-[13px] font-medium tracking-[-0.01em] text-ink-3">
           {d.contact.label}
         </h2>
-        <p className="mt-8 max-w-2xl text-[2rem] font-medium leading-[1.15] tracking-[-0.022em] text-ink md:text-[2.6rem]">
-          {d.contact.title}
-        </p>
-        <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2">
+        {d.contact.title && (
+          <p className="mt-8 max-w-2xl text-[2rem] font-medium leading-[1.15] tracking-[-0.022em] text-ink md:text-[2.6rem]">
+            {d.contact.title}
+          </p>
+        )}
+        <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2">
           <ContactItem
             label={d.contact.email}
             value="bronco.drift@outlook.com"

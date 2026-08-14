@@ -30,6 +30,16 @@ export type Dict = {
   about: { label: string; p1: string; p2: string };
   contact: { label: string; title: string; email: string; github: string };
   faq: { label: string; nav: string; intro: string; backHome: string };
+  lumina: {
+    title: string;
+    subtitle: string;
+    nav: string;
+    systemLabel: string;
+    cardName: string;
+    projectsHeading: string;
+    projectsIntro: string;
+    builtWith: string;
+  };
   footer: { backToTop: string };
   detail: {
     allWork: string;
@@ -50,7 +60,7 @@ export const dict: Record<Locale, Dict> = {
     nav: { work: "Work", about: "About", contact: "Contact" },
     hero: {
       title: "Bronco Drift.",
-      body: "Independent web work — interfaces, systems, and the occasional side project. A small collection of what I've shipped, below.",
+      body: "Systems and pages built with care — made to add value and carry a feeling of their own. A selection below.",
     },
     work: {
       label: "Selected work",
@@ -69,12 +79,12 @@ export const dict: Record<Locale, Dict> = {
     },
     about: {
       label: "About",
-      p1: "Bronco Drift is the working name for an independent design and engineering practice. The output: refined interfaces, systems built to be lived in, and the occasional cartographic detour.",
-      p2: "Comfortable across the stack — React, Next.js, Supabase, Firebase — and partial to projects that prefer clarity over cleverness. Open to commissions and collaborations.",
+      p1: "Bronco Drift is the name I design and build under. Systems and pages built to add value, with a feeling of their own in the interface — cleanliness, air, hierarchy drawn by typography rather than color.",
+      p2: "I work across the stack — React, Next.js, Supabase, Firebase — and lean toward projects that pick clarity over cleverness. Every one of them ships with the same rule: readable, durable, light.",
     },
     contact: {
       label: "Contact",
-      title: "Open to commissions, collaborations, and well-posed problems.",
+      title: "",
       email: "Email",
       github: "GitHub",
     },
@@ -84,6 +94,18 @@ export const dict: Record<Locale, Dict> = {
       intro:
         "What I work with, how the process tends to go, and the answers people usually need before reaching out.",
       backHome: "Back to home",
+    },
+    lumina: {
+      title: "Lumina",
+      subtitle:
+        "A design language — not a palette, a way of resolving the interface.",
+      nav: "Lumina",
+      systemLabel: "Design language",
+      cardName: "Lumina",
+      projectsHeading: "Projects in this style",
+      projectsIntro:
+        "The Lumina rules show up across these entries. Each one links to its full case.",
+      builtWith: "Built with Lumina",
     },
     footer: {
       backToTop: "Back to top",
@@ -123,7 +145,7 @@ export const dict: Record<Locale, Dict> = {
     nav: { work: "Trabajos", about: "Sobre", contact: "Contacto" },
     hero: {
       title: "Bronco Drift.",
-      body: "Trabajo web independiente — interfaces, sistemas y algún proyecto paralelo. Abajo, una selección de lo que llevé a producción.",
+      body: "Sistemas y páginas hechos con cuidado — pensados para aportar valor y con un sentimiento propio. Abajo, una selección.",
     },
     work: {
       label: "Trabajos seleccionados",
@@ -142,12 +164,12 @@ export const dict: Record<Locale, Dict> = {
     },
     about: {
       label: "Sobre",
-      p1: "Bronco Drift es el nombre bajo el que diseño y programo, por mi cuenta. Lo que sale: interfaces que prefieren la claridad, sistemas pensados para habitar, y algún experimento con mapas cada tanto.",
-      p2: "Trabajo con todo el stack — React, Next.js, Supabase, Firebase — y me llevo mejor con los proyectos que eligen ser claros antes que ingeniosos. Abierto a encargos y colaboraciones.",
+      p1: "Bronco Drift es el nombre bajo el que diseño y construyo. Sistemas y páginas pensados para aportar valor, con un sentimiento propio en la interfaz — limpieza, aire, jerarquía puesta por la tipografía y no por el color.",
+      p2: "Trabajo con todo el stack — React, Next.js, Supabase, Firebase — y me llevo mejor con los proyectos que eligen ser claros antes que ingeniosos. Cada uno sale con el mismo criterio: que se entienda, que dure, que no pese.",
     },
     contact: {
       label: "Contacto",
-      title: "Abierto a encargos, colaboraciones y problemas bien planteados.",
+      title: "",
       email: "Email",
       github: "GitHub",
     },
@@ -157,6 +179,18 @@ export const dict: Record<Locale, Dict> = {
       intro:
         "Con qué trabajo, cómo suele ser el proceso, y las respuestas que la mayoría necesita antes de escribirme.",
       backHome: "Volver al inicio",
+    },
+    lumina: {
+      title: "Lumina",
+      subtitle:
+        "Un lenguaje de diseño — no una paleta, una forma de resolver la interfaz.",
+      nav: "Lumina",
+      systemLabel: "Lenguaje de diseño",
+      cardName: "Diseño Lumina",
+      projectsHeading: "Proyectos en este estilo",
+      projectsIntro:
+        "Las reglas de Lumina aparecen en estos proyectos. Cada uno linkea a su caso completo.",
+      builtWith: "Hecho con Lumina",
     },
     footer: {
       backToTop: "Volver arriba",
