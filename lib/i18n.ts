@@ -101,7 +101,7 @@ export const dict: Record<Locale, Dict> = {
         "A design language — not a palette, a way of resolving the interface.",
       nav: "Lumina",
       systemLabel: "Design language",
-      cardName: "Lumina",
+      cardName: "Diseño Lumina",
       projectsHeading: "Projects in this style",
       projectsIntro:
         "The Lumina rules show up across these entries. Each one links to its full case.",
