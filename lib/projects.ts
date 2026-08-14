@@ -519,7 +519,8 @@ export const projects: Project[] = [
     year: "2026",
     role: designBuild,
     stack: ["Vite", "React 19", "PWA"],
-    status: "in-progress",
+    status: "live",
+    url: "https://la-guia-phi.vercel.app/",
     screenshots: [],
     sections: [
       {
