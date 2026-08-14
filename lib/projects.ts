@@ -731,8 +731,42 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "vikings-txt",
+    slug: "bouncing-balls",
     number: "20",
+    name: "Bouncing Balls",
+    tagline: {
+      en: "A physics playground for bouncing balls, with knobs and a benchmark mode.",
+      es: "Un playground físico de pelotas rebotando, con perillas y modo experimento.",
+    },
+    description: {
+      en: "Single-file HTML canvas — configurable gravity, restitution, ball count, plus a benchmark mode that runs parameterized experiments.",
+      es: "HTML canvas de un solo archivo — gravedad, restitución y cantidad de pelotas configurables, más un modo experimento parametrizado.",
+    },
+    year: "2026",
+    role: designBuild,
+    stack: ["HTML", "Canvas", "JavaScript"],
+    status: "live",
+    screenshots: [],
+    sections: [
+      {
+        heading: "Brief",
+        body: {
+          en: "A single-page physics playground for bouncing balls — configurable in real time, small enough to open once and lose an hour.",
+          es: "Un playground físico de una sola página para pelotas rebotando — configurable en vivo, chico como para abrirlo una vez y perder una hora.",
+        },
+      },
+      {
+        heading: "Approach",
+        body: {
+          en: "Single HTML file, no dependencies. Canvas at fixed internal resolution scaled by CSS to preserve physics on any screen. Side panel with sliders, presets, pause/reset, and a benchmark mode for parameterized experiments.",
+          es: "Un solo HTML, sin dependencias. Canvas con resolución interna fija y escalado por CSS para preservar la física en cualquier pantalla. Panel lateral con sliders, presets, pausa/reset y modo experimento parametrizado.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "vikings-txt",
+    number: "21",
     name: "Vikings.TXT",
     tagline: {
       en: "A retro TXT mini-game, brought back from Python.",
@@ -774,7 +808,7 @@ export const projects: Project[] = [
   },
   {
     slug: "rally-aesthetic",
-    number: "21",
+    number: "22",
     name: "Rally Aesthetic",
     tagline: {
       en: "A rally-inspired aesthetic experiment, still in beta.",
@@ -809,7 +843,7 @@ export const projects: Project[] = [
   },
   {
     slug: "webstudio-argentina",
-    number: "22",
+    number: "23",
     name: "WebStudio Argentina",
     tagline: {
       en: "A small studio shipping modern, fast websites.",
