@@ -122,47 +122,47 @@ export function ProjectDetail({
                   </span>
                 </Link>
               )}
+
+              {project.making && project.making.length > 0 && (
+                <div className="mt-10 space-y-8 rounded-3xl border border-border bg-elevated p-7 md:mt-12 md:p-9">
+                  <h2 className="text-[13px] font-medium uppercase tracking-[0.02em] text-ink-3">
+                    {d.detail.makingLabel}
+                  </h2>
+                  <div className="space-y-7">
+                    {project.making.map((m, i) => (
+                      <div key={i}>
+                        <h3 className="text-[13px] font-medium tracking-[-0.01em] text-ink">
+                          {t(m.heading, locale)}
+                        </h3>
+                        {m.body && (
+                          <p className="mt-3 text-[15px] leading-[1.6] text-ink-2 md:text-base md:leading-[1.6]">
+                            {t(m.body, locale)}
+                          </p>
+                        )}
+                        {m.bullets && m.bullets.length > 0 && (
+                          <ul className="mt-3 space-y-2.5 text-[15px] leading-[1.6] text-ink-2 md:text-base md:leading-[1.6]">
+                            {m.bullets.map((b, j) => (
+                              <li key={j} className="flex gap-3">
+                                <span
+                                  aria-hidden
+                                  className="mt-[0.7em] inline-block h-[1.5px] w-3 shrink-0 bg-ink-3"
+                                />
+                                <span>{t(b, locale)}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </motion.div>
           </div>
         </header>
 
         <section className="safe-px-6 border-b border-border py-20 md:py-28">
           <div className="mx-auto max-w-3xl space-y-14">
-            {project.making && project.making.length > 0 && (
-              <div className="space-y-8 rounded-3xl border border-border bg-elevated p-7 md:p-9">
-                <h2 className="text-[13px] font-medium uppercase tracking-[0.02em] text-ink-3">
-                  {d.detail.makingLabel}
-                </h2>
-                <div className="space-y-7">
-                  {project.making.map((m, i) => (
-                    <div key={i}>
-                      <h3 className="text-[13px] font-medium tracking-[-0.01em] text-ink">
-                        {t(m.heading, locale)}
-                      </h3>
-                      {m.body && (
-                        <p className="mt-3 text-[15px] leading-[1.6] text-ink-2 md:text-base md:leading-[1.6]">
-                          {t(m.body, locale)}
-                        </p>
-                      )}
-                      {m.bullets && m.bullets.length > 0 && (
-                        <ul className="mt-3 space-y-2.5 text-[15px] leading-[1.6] text-ink-2 md:text-base md:leading-[1.6]">
-                          {m.bullets.map((b, j) => (
-                            <li key={j} className="flex gap-3">
-                              <span
-                                aria-hidden
-                                className="mt-[0.7em] inline-block h-[1.5px] w-3 shrink-0 bg-ink-3"
-                              />
-                              <span>{t(b, locale)}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
             {project.sections.map((s) => (
               <div key={s.heading}>
                 <h3 className="text-[13px] font-medium tracking-[-0.01em] text-ink-3">
