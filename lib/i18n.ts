@@ -48,6 +48,7 @@ export type Dict = {
     nextProject: string;
     embedLabel: string;
     embedHint: string;
+    makingLabel: string;
     sections: Record<string, string>;
   };
   notFound: { label: string; title: string; body: string; back: string };
@@ -117,6 +118,7 @@ export const dict: Record<Locale, Dict> = {
       nextProject: "Next project",
       embedLabel: "Live demo",
       embedHint: "Playable here — click into the frame to interact.",
+      makingLabel: "The making of, with Claude",
       sections: {
         Brief: "Brief",
         Approach: "Approach",
@@ -202,6 +204,7 @@ export const dict: Record<Locale, Dict> = {
       nextProject: "Siguiente proyecto",
       embedLabel: "Demo en vivo",
       embedHint: "Se juega acá — tocá adentro del marco para interactuar.",
+      makingLabel: "Cómo se hizo, con Claude",
       sections: {
         Brief: "Resumen",
         Approach: "Enfoque",

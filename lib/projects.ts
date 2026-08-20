@@ -24,6 +24,11 @@ export type ProjectSection = {
   body: LocalizedString;
 };
 
+export type MakingSection = {
+  heading: LocalizedString;
+  body: LocalizedString;
+};
+
 export type Screenshot = {
   src: string;
   alt: string;
@@ -47,6 +52,7 @@ export type Project = {
   repo?: string;
   embed?: string;
   screenshots?: Screenshot[];
+  making?: MakingSection[];
   sections: ProjectSection[];
 };
 
@@ -300,6 +306,43 @@ export const projects: Project[] = [
     status: "live",
     url: "https://albumfamiliar.vercel.app/",
     screenshots: [],
+    making: [
+      {
+        heading: { en: "Research", es: "Investigación" },
+        body: {
+          en: "The starting brief looked like BeReal for a closed group of nine. The first honest call was that 'MVP without a backend' didn't apply here — nine phones seeing each other's photos needs a server from commit 1; there's no localStorage version you can later 'add backend' to without throwing away the work. Storage math decided a lot: raw photos would burn 10 GB a year; WebP at 1080px pushes that down to 600 MB; a rolling 30-day window drops it to ~100 MB steady-state — comfortably inside Supabase's free tier. Region was picked knowing the family lives across three continents (US kept over São Paulo). Supabase's 2-project free cap was solved by opening a separate org for the app instead of squatting on Lumina's project.",
+          es: "El brief inicial se parecía a BeReal para un grupo cerrado de nueve. La primera decisión honesta fue que 'MVP sin backend' no aplicaba acá — nueve teléfonos viendo las fotos de los demás necesitan servidor desde el commit 1; no hay una versión localStorage que después 'se le agregue backend' sin tirar el laburo. La matemática del storage definió mucho: fotos crudas quemaban 10 GB al año; WebP a 1080px baja a 600 MB; ventana rodante de 30 días la deja en ~100 MB estables — cómodo adentro del free tier de Supabase. La región se eligió sabiendo que la familia vive en tres continentes (Oregon por sobre São Paulo). El límite free de 2 proyectos de Supabase se resolvió abriendo una org aparte, sin invadir el proyecto de Lumina.",
+        },
+      },
+      {
+        heading: { en: "Database", es: "Base de datos" },
+        body: {
+          en: "Three tables — Room, Member, Photo — behind five migrations. The centerpiece: a UNIQUE (room_id, member_id, day_key) constraint that makes 'one photo per day per person' impossible to break from React, no matter how many double-taps. Two design calls that pay off in month two: day_key stored in the room's timezone (not the device's), so a family split between Buenos Aires and Caracas sees the same 'today'; and Member hangs off Room (not the other way around), so a person in three rooms is three rows — auth_user_id ties them together for a multi-room future without touching schema. The 5-photos-per-day carousel cap lives in a Postgres trigger, not a React if. expires_at is a GENERATED column (day_key + 30 days) so it can't drift. A daily cron on Vercel sweeps the storage bucket AND the row (in that order; forgetting either fills the bucket).",
+          es: "Tres tablas — Room, Member, Photo — atrás de cinco migraciones. La pieza central: un UNIQUE (room_id, member_id, day_key) que hace imposible desde React romper la regla 'una foto por día por persona', por más doble-tap que haya. Dos decisiones que rinden en el mes dos: day_key se guarda en la timezone de la SALA (no la del dispositivo) para que una familia entre Buenos Aires y Caracas vea el mismo 'hoy'; y Member cuelga de Room (no al revés), así una persona en tres salas son tres filas — auth_user_id las une para un futuro multi-sala sin tocar el schema. El tope de 5 fotos por día del carrusel vive en un trigger de Postgres, no en un if de React. expires_at es una columna GENERATED (day_key + 30 días) para que no se desincronice. Un cron diario en Vercel barre el bucket de storage Y la fila (en ese orden — olvidarse cualquiera de los dos llena el bucket).",
+        },
+      },
+      {
+        heading: { en: "Auth and setup", es: "Auth y setup" },
+        body: {
+          en: "Vite + React 19 + TypeScript, structured by feature (core/services/features/rooms/identity/feed/ui/styles) so each folder has one owner. Auth is Google one-tap + magic link fallback — the tío enters in two taps without inventing a password. The publishable Supabase key ships in the frontend; the service_role key lives only as a Vercel env var for the deletion cron and never touches the repo. Dev workflow bypasses the login: VITE_DEV_EMAIL and VITE_DEV_PASSWORD in .env.local let the app boot straight into a real Supabase session, so RLS is exercised for real instead of being faked around.",
+          es: "Vite + React 19 + TypeScript, estructurado por feature (core/services/features/rooms/identity/feed/ui/styles) para que cada carpeta tenga un dueño. Auth es Google one-tap + magic link como fallback — el tío entra en dos taps sin inventar contraseña. La publishable key de Supabase viaja en el frontend; la service_role vive solo como env var de Vercel para el cron de borrado, nunca toca el repo. El flujo de dev saltea el login: VITE_DEV_EMAIL y VITE_DEV_PASSWORD en .env.local hacen que la app arranque directo en una sesión Supabase real, así RLS se ejercita de verdad en vez de fingirse.",
+        },
+      },
+      {
+        heading: { en: "UX and interface", es: "UX e interfaz" },
+        body: {
+          en: "The grid uses auto-fill, no breakpoints written by hand. The carousel is native scroll-snap. Safe areas cover four sides, dvh instead of vh, inputs at 16px minimum — from the first commit, not as a patch. The strongest design call: your card isn't just another card — if you haven't posted, your slot IS the upload button (a rectangle with a fine dashed border and a camera icon). No FAB, no floating action bar covering photos. The action lives in the gap the grid is missing. Immersive is the default theme; the sober variant is one tap away. Photo viewer is a fullscreen story that runs through everyone's photos, not just one person's.",
+          es: "La grilla usa auto-fill, sin un solo breakpoint escrito a mano. El carrusel es scroll-snap nativo. Safe areas en cuatro lados, dvh en vez de vh, inputs a 16px mínimo — desde el primer commit, no como parche. La decisión más fuerte: tu tarjeta no es una más — si todavía no subiste, tu slot ES el botón de subir (un rectángulo con borde punteado fino y un ícono de cámara). Sin FAB, sin barra flotante tapando fotos. La acción vive en el hueco que la grilla le falta. Inmersivo es el tema default; el sobrio queda a un tap. El visor de fotos es una story fullscreen que recorre las fotos de todos, no solo las de una persona.",
+        },
+      },
+      {
+        heading: { en: "Bugs and lessons", es: "Bugs y aprendizajes" },
+        body: {
+          en: "The defensive code had its own bug: the Supabase client used ?? for the fallback, and ?? doesn't cover the empty string — with the env var declared but blank, the module blew up before the setup screen (whose whole job was avoiding that) could render. Changed to ||. A dialog that wouldn't close turned out to be three failures stacked: two booleans (uploaderOpen + inviteOpen) let 'both open' be a representable state, refactored to a single 'upload' | 'invite' | null; HMR left orphan <dialog> nodes in the browser's top layer (fixed by calling close() on unmount); and .sheet { display: flex } was overriding the browser's display: none on a closed <dialog>, so it stayed visible even when React thought it was closed. The compression math got a real number, worst case: a 3024×4032 photo full of random noise went from 2409 KB to 276 KB at 1080×1440 — an 8.7× reduction. Real photos compress better.",
+          es: "El código defensivo tenía su propio bug: el cliente de Supabase usaba ?? para el fallback, y ?? no cubre el string vacío — con la env var declarada pero en blanco, el módulo reventaba antes de que la pantalla de setup (cuyo único trabajo era evitar eso) pudiera renderizarse. Cambiado a ||. Un diálogo que no cerraba resultaron ser tres fallas apiladas: dos booleanos (uploaderOpen + inviteOpen) hacían representable el estado 'dos abiertos', refactor a un solo 'upload' | 'invite' | null; HMR dejaba <dialog> huérfanos en el top layer del navegador (fix: llamar close() al desmontar); y .sheet { display: flex } pisaba el display: none del navegador para un <dialog> cerrado, así seguía visible aunque React lo creyera cerrado. La matemática de compresión sacó un número real, peor caso: una foto 3024×4032 llena de ruido aleatorio pasó de 2409 KB a 276 KB en 1080×1440 — reducción 8.7×. Las fotos reales comprimen mejor.",
+        },
+      },
+    ],
     sections: [
       {
         heading: "Brief",

@@ -128,6 +128,28 @@ export function ProjectDetail({
 
         <section className="safe-px-6 border-b border-border py-20 md:py-28">
           <div className="mx-auto max-w-3xl space-y-14">
+            {project.making && project.making.length > 0 && (
+              <div className="space-y-10 rounded-3xl border border-border bg-elevated p-8 md:p-10">
+                <div>
+                  <h2 className="text-[13px] font-medium uppercase tracking-[0.02em] text-ink-3">
+                    {d.detail.makingLabel}
+                  </h2>
+                </div>
+                <div className="space-y-10">
+                  {project.making.map((m, i) => (
+                    <div key={i}>
+                      <h3 className="text-[13px] font-medium tracking-[-0.01em] text-ink-2">
+                        {t(m.heading, locale)}
+                      </h3>
+                      <p className="mt-3 text-base leading-[1.65] text-ink-2 md:text-lg md:leading-[1.6]">
+                        {t(m.body, locale)}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {project.sections.map((s) => (
               <div key={s.heading}>
                 <h3 className="text-[13px] font-medium tracking-[-0.01em] text-ink-3">
