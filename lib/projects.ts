@@ -64,232 +64,8 @@ const designBuild: LocalizedString = {
 
 export const projects: Project[] = [
   {
-    slug: "lumina",
-    number: "01",
-    level: 5,
-    category: "apps",
-    luminaStyle: true,
-    name: "Lumina",
-    tagline: {
-      en: "Appointment booking, distilled.",
-      es: "Reservar turnos, sin vueltas.",
-    },
-    description: {
-      en: "A SaaS for appointment booking — phase-by-phase build on Next 16, Supabase, and shadcn/ui v4.",
-      es: "Un SaaS para reservar turnos — armado fase a fase sobre Next 16, Supabase y shadcn/ui v4.",
-    },
-    year: "2026",
-    role: { en: "Full-stack", es: "Full-stack" },
-    stack: ["Next.js 16", "Supabase", "shadcn/ui", "Tailwind v4"],
-    status: "in-progress",
-    url: "https://luminaagenda.click/",
-    screenshots: [],
-    sections: [
-      {
-        heading: "Brief",
-        body: {
-          en: "An appointment booking SaaS that removes friction from scheduling without inventing five new concepts for users to learn.",
-          es: "Un SaaS para reservar turnos que no obliga al usuario a aprender cinco conceptos nuevos antes de agendar.",
-        },
-      },
-      {
-        heading: "Approach",
-        body: {
-          en: "Spec-driven, phase-by-phase implementation. Deploy via Vercel Git integration; manual SQL migrations for full control over schema evolution. Auth, calendar, availability, and notifications composed from first principles.",
-          es: "Implementación por fases guiada por spec. Deploy automático con la integración Git de Vercel; migraciones SQL a mano para tener control total del schema. Auth, calendario, disponibilidad y notificaciones armados desde cero.",
-        },
-      },
-      {
-        heading: "Status",
-        body: {
-          en: "In active development. Shipping in vertical slices that work end-to-end before broadening.",
-          es: "En desarrollo activo. Saco features completas que funcionan punta a punta antes de seguir agregando.",
-        },
-      },
-    ],
-  },
-  {
-    slug: "mapitas",
-    number: "02",
-    level: 4,
-    category: "apps",
-    luminaStyle: true,
-    name: "Mapitas",
-    tagline: {
-      en: "Venezuela's territory, made legible.",
-      es: "El territorio de Venezuela, hecho legible.",
-    },
-    description: {
-      en: "Maps and CSVs of Venezuela's municipalities. Static-first, no backend, Apple/Anthropic-leaning UI.",
-      es: "Mapas y CSV de los municipios de Venezuela. Estático primero, sin backend, UI cercana a Apple/Anthropic.",
-    },
-    year: "2026",
-    role: designBuild,
-    stack: ["Vite", "React 19", "Leaflet", "Zustand"],
-    status: "live",
-    url: "https://mapitas-omega.vercel.app/",
-    screenshots: [],
-    sections: [
-      {
-        heading: "Brief",
-        body: {
-          en: "Make the territorial structure of Venezuela legible — municipalities, demographics, populations — without burying the data in a CMS or a paywall.",
-          es: "Hacer legible la estructura territorial de Venezuela — municipios, demografía, poblaciones — sin enterrar los datos en un CMS ni detrás de un paywall.",
-        },
-      },
-      {
-        heading: "Approach",
-        body: {
-          en: "Static-first. CSVs as the source of truth, parsed at build time. Leaflet for the map layer, Zustand for filter state. No backend, no auth, no friction.",
-          es: "Estático primero. Los CSV son la fuente de verdad, se parsean al build. Leaflet para la capa de mapa, Zustand para el estado de filtros. Sin backend, sin auth, sin fricción.",
-        },
-      },
-      {
-        heading: "Outcome",
-        body: {
-          en: "Live and embeddable. Designed to be quoted from, not curated through.",
-          es: "En vivo y embebible. Pensado para citar los datos, no para perderse adentro.",
-        },
-      },
-    ],
-  },
-  {
-    slug: "auditoria-ciudadana",
-    number: "03",
-    level: 5,
-    category: "apps",
-    luminaStyle: true,
-    name: "Auditoría Ciudadana",
-    tagline: {
-      en: "The Venezuelan state, mapped and ranked by evidence.",
-      es: "El Estado venezolano, mapeado y clasificado por evidencia.",
-    },
-    description: {
-      en: "Full organigram of the Venezuelan State — around 4,000 positions across 5 branches and 3 territorial levels — with per-role evidence grades, budget flows, and a citizen reporting layer for failing infrastructure.",
-      es: "Organigrama completo del Estado venezolano — cerca de 4.000 cargos entre 5 poderes y 3 niveles territoriales — con grados de evidencia por cargo, flujos de presupuesto, y una capa de reportes ciudadanos sobre infraestructura que falla.",
-    },
-    year: "2026",
-    role: designBuild,
-    stack: ["Vite", "React 19", "Zustand", "Supabase", "Leaflet"],
-    status: "in-progress",
-    url: "https://la-nomina.vercel.app/",
-    screenshots: [],
-    sections: [
-      {
-        heading: "Brief",
-        body: {
-          en: "Make the state legible. Every position, every budget line, every dependency with an evidence grade attached. A complementary layer lets residents report failing infrastructure so the map can cross supply (state spending) against demand (what's actually broken).",
-          es: "Hacer legible el Estado. Cada cargo, cada partida, cada dependencia con un grado de evidencia adjunto. Una capa complementaria deja que los vecinos reporten la infraestructura que falla para poder cruzar oferta (gasto del Estado) contra demanda (lo que no anda).",
-        },
-      },
-      {
-        heading: "Approach",
-        body: {
-          en: "Evidence grades A–E per data point; source required. Estimation cascade in a methods file, not tucked into components. Real budget anchor from the 2025 law (PDF mirrored with attribution). San Cristóbal drawn barrio-by-barrio on Leaflet against 11,449 real OSM rooftops as ground truth. Report rate-limit uses server-side hashed IP pulses — the raw IP is never stored.",
-          es: "Grados de evidencia A–E por dato, con fuente obligatoria. Cascada de estimación en un archivo de métodos, no escondida en componentes. Ancla real de presupuesto: la ley 2025 (PDF espejado con atribución). San Cristóbal dibujado barrio por barrio sobre Leaflet contra 11.449 techos OSM reales como ground truth. El anti-troll de reportes va por pulsos con IP hasheada del lado servidor — la IP cruda nunca se guarda.",
-        },
-      },
-      {
-        heading: "Status",
-        body: {
-          en: "In production and iterating hard. The San Cristóbal barrio layer is the most-visited surface; the citizen reporting flow is live with anti-troll limits.",
-          es: "En producción e iterando fuerte. La capa de San Cristóbal barrio por barrio es la superficie más visitada; el flujo de reportes ciudadanos está en vivo con límites anti-troll.",
-        },
-      },
-    ],
-  },
-  {
-    slug: "optimal-routine-builder",
-    number: "04",
-    level: 5,
-    category: "apps",
-    name: "Optimal Routine Builder",
-    tagline: {
-      en: "AI-tailored training, end-to-end.",
-      es: "Entrenamiento personalizado por IA, punta a punta.",
-    },
-    description: {
-      en: "A workout generator that pairs Gemini with a structured movement library. Vite + React 19 + Supabase.",
-      es: "Un generador de rutinas que combina Gemini con una librería estructurada de movimientos. Vite + React 19 + Supabase.",
-    },
-    year: "2026",
-    role: designBuild,
-    stack: ["Vite", "React 19", "Gemini API", "Supabase"],
-    status: "live",
-    url: "https://optimal-routine-builder.vercel.app/",
-    screenshots: [],
-    sections: [
-      {
-        heading: "Brief",
-        body: {
-          en: "Generate workout routines that are actually personalized — not the same six exercises rebranded by goal label.",
-          es: "Generar rutinas de ejercicio que estén realmente personalizadas — no los mismos seis ejercicios rebautizados según el objetivo.",
-        },
-      },
-      {
-        heading: "Approach",
-        body: {
-          en: "Gemini for plan synthesis, Supabase for persistence, a structured movement library to keep the model honest about volume, frequency, and recovery windows. A theme sandbox runs in parallel for skin experiments without touching production.",
-          es: "Gemini sintetiza el plan, Supabase guarda, y una librería estructurada de movimientos mantiene al modelo a raya con volumen, frecuencia y descansos. En paralelo corre un sandbox de temas para experimentar skins sin tocar producción.",
-        },
-      },
-      {
-        heading: "Outcome",
-        body: {
-          en: "Shipped and iterating. The most-used surface is the weekly view; routines export cleanly.",
-          es: "Lanzado y en iteración. Lo más usado es la vista semanal; las rutinas exportan limpias.",
-        },
-      },
-    ],
-  },
-  {
-    slug: "misclientes",
-    number: "05",
-    level: 5,
-    category: "apps",
-    luminaStyle: true,
-    name: "misclientes",
-    tagline: {
-      en: "A two-in-one PWA: LATAM dollar rates + a personal tools stack.",
-      es: "Una PWA dos-en-uno: cotización del dólar en LATAM + un stack propio de herramientas.",
-    },
-    description: {
-      en: "Landing for LATAM dollar rates (AR + VE) with a growing bench of personal tools: CRM, expenses, subscriptions, PTO planner, habits, kanban, and games.",
-      es: "Landing de cotizaciones del dólar en LATAM (AR + VE) con un banco creciente de herramientas personales: CRM, gastos, suscripciones, planner de PTO, hábitos, kanban y juegos.",
-    },
-    year: "2026",
-    role: designBuild,
-    stack: ["Vite", "React 19", "TypeScript", "PWA"],
-    status: "live",
-    url: "https://misclientes.vercel.app/",
-    screenshots: [],
-    sections: [
-      {
-        heading: "Brief",
-        body: {
-          en: "A practice project for backend and frontend chops that ended up as a daily driver — dollar rates on top, a growing bench of personal tools underneath.",
-          es: "Un proyecto de práctica para backend y frontend que terminó siendo de uso diario — cotizaciones del dólar arriba, un banco creciente de herramientas personales abajo.",
-        },
-      },
-      {
-        heading: "Approach",
-        body: {
-          en: "Vite + React 19 + TypeScript, PWA with safe areas and offline. All state in localStorage; module-frontier files (storage.ts, cotizaciones.ts) let the future backend swap in without touching views. Structured by domain, not tech.",
-          es: "Vite + React 19 + TypeScript, PWA con safe areas y offline. Todo el estado en localStorage; archivos frontera (storage.ts, cotizaciones.ts) dejan que el backend futuro entre sin tocar las vistas. Estructurado por dominio, no por tecnología.",
-        },
-      },
-      {
-        heading: "Outcome",
-        body: {
-          en: "In production. Eight tools shipped and in daily use.",
-          es: "En producción. Ocho herramientas lanzadas y en uso diario.",
-        },
-      },
-    ],
-  },
-  {
     slug: "foto-dia",
-    number: "06",
+    number: "01",
     level: 5,
     category: "apps",
     name: "Foto del Día",
@@ -361,6 +137,230 @@ export const projects: Project[] = [
         body: {
           en: "RPC-first data: a single call brings today's rooms, members, and photos in one round trip and seeds react-query at boot. 30-day storage signatures persisted in localStorage. Progressive image loading (thumbnail → full via decode() → swap). Pull-to-refresh done in-browser. Immersive is the default; the sober theme is still one tap away.",
           es: "Data RPC-first: una sola llamada trae las salas, miembros y fotos de hoy en un viaje y siembra react-query al arrancar. Firmas de storage 30 días persistidas en localStorage. Carga progresiva de imágenes (miniatura → grande con decode() → swap). Tirón-para-refrescar hecho en el navegador. Inmersivo es el default; el tema sobrio queda a un tap.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "lumina",
+    number: "02",
+    level: 5,
+    category: "apps",
+    luminaStyle: true,
+    name: "Lumina",
+    tagline: {
+      en: "Appointment booking, distilled.",
+      es: "Reservar turnos, sin vueltas.",
+    },
+    description: {
+      en: "A SaaS for appointment booking — phase-by-phase build on Next 16, Supabase, and shadcn/ui v4.",
+      es: "Un SaaS para reservar turnos — armado fase a fase sobre Next 16, Supabase y shadcn/ui v4.",
+    },
+    year: "2026",
+    role: { en: "Full-stack", es: "Full-stack" },
+    stack: ["Next.js 16", "Supabase", "shadcn/ui", "Tailwind v4"],
+    status: "in-progress",
+    url: "https://luminaagenda.click/",
+    screenshots: [],
+    sections: [
+      {
+        heading: "Brief",
+        body: {
+          en: "An appointment booking SaaS that removes friction from scheduling without inventing five new concepts for users to learn.",
+          es: "Un SaaS para reservar turnos que no obliga al usuario a aprender cinco conceptos nuevos antes de agendar.",
+        },
+      },
+      {
+        heading: "Approach",
+        body: {
+          en: "Spec-driven, phase-by-phase implementation. Deploy via Vercel Git integration; manual SQL migrations for full control over schema evolution. Auth, calendar, availability, and notifications composed from first principles.",
+          es: "Implementación por fases guiada por spec. Deploy automático con la integración Git de Vercel; migraciones SQL a mano para tener control total del schema. Auth, calendario, disponibilidad y notificaciones armados desde cero.",
+        },
+      },
+      {
+        heading: "Status",
+        body: {
+          en: "In active development. Shipping in vertical slices that work end-to-end before broadening.",
+          es: "En desarrollo activo. Saco features completas que funcionan punta a punta antes de seguir agregando.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "mapitas",
+    number: "03",
+    level: 4,
+    category: "apps",
+    luminaStyle: true,
+    name: "Mapitas",
+    tagline: {
+      en: "Venezuela's territory, made legible.",
+      es: "El territorio de Venezuela, hecho legible.",
+    },
+    description: {
+      en: "Maps and CSVs of Venezuela's municipalities. Static-first, no backend, Apple/Anthropic-leaning UI.",
+      es: "Mapas y CSV de los municipios de Venezuela. Estático primero, sin backend, UI cercana a Apple/Anthropic.",
+    },
+    year: "2026",
+    role: designBuild,
+    stack: ["Vite", "React 19", "Leaflet", "Zustand"],
+    status: "live",
+    url: "https://mapitas-omega.vercel.app/",
+    screenshots: [],
+    sections: [
+      {
+        heading: "Brief",
+        body: {
+          en: "Make the territorial structure of Venezuela legible — municipalities, demographics, populations — without burying the data in a CMS or a paywall.",
+          es: "Hacer legible la estructura territorial de Venezuela — municipios, demografía, poblaciones — sin enterrar los datos en un CMS ni detrás de un paywall.",
+        },
+      },
+      {
+        heading: "Approach",
+        body: {
+          en: "Static-first. CSVs as the source of truth, parsed at build time. Leaflet for the map layer, Zustand for filter state. No backend, no auth, no friction.",
+          es: "Estático primero. Los CSV son la fuente de verdad, se parsean al build. Leaflet para la capa de mapa, Zustand para el estado de filtros. Sin backend, sin auth, sin fricción.",
+        },
+      },
+      {
+        heading: "Outcome",
+        body: {
+          en: "Live and embeddable. Designed to be quoted from, not curated through.",
+          es: "En vivo y embebible. Pensado para citar los datos, no para perderse adentro.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "auditoria-ciudadana",
+    number: "04",
+    level: 5,
+    category: "apps",
+    luminaStyle: true,
+    name: "Auditoría Ciudadana",
+    tagline: {
+      en: "The Venezuelan state, mapped and ranked by evidence.",
+      es: "El Estado venezolano, mapeado y clasificado por evidencia.",
+    },
+    description: {
+      en: "Full organigram of the Venezuelan State — around 4,000 positions across 5 branches and 3 territorial levels — with per-role evidence grades, budget flows, and a citizen reporting layer for failing infrastructure.",
+      es: "Organigrama completo del Estado venezolano — cerca de 4.000 cargos entre 5 poderes y 3 niveles territoriales — con grados de evidencia por cargo, flujos de presupuesto, y una capa de reportes ciudadanos sobre infraestructura que falla.",
+    },
+    year: "2026",
+    role: designBuild,
+    stack: ["Vite", "React 19", "Zustand", "Supabase", "Leaflet"],
+    status: "in-progress",
+    url: "https://la-nomina.vercel.app/",
+    screenshots: [],
+    sections: [
+      {
+        heading: "Brief",
+        body: {
+          en: "Make the state legible. Every position, every budget line, every dependency with an evidence grade attached. A complementary layer lets residents report failing infrastructure so the map can cross supply (state spending) against demand (what's actually broken).",
+          es: "Hacer legible el Estado. Cada cargo, cada partida, cada dependencia con un grado de evidencia adjunto. Una capa complementaria deja que los vecinos reporten la infraestructura que falla para poder cruzar oferta (gasto del Estado) contra demanda (lo que no anda).",
+        },
+      },
+      {
+        heading: "Approach",
+        body: {
+          en: "Evidence grades A–E per data point; source required. Estimation cascade in a methods file, not tucked into components. Real budget anchor from the 2025 law (PDF mirrored with attribution). San Cristóbal drawn barrio-by-barrio on Leaflet against 11,449 real OSM rooftops as ground truth. Report rate-limit uses server-side hashed IP pulses — the raw IP is never stored.",
+          es: "Grados de evidencia A–E por dato, con fuente obligatoria. Cascada de estimación en un archivo de métodos, no escondida en componentes. Ancla real de presupuesto: la ley 2025 (PDF espejado con atribución). San Cristóbal dibujado barrio por barrio sobre Leaflet contra 11.449 techos OSM reales como ground truth. El anti-troll de reportes va por pulsos con IP hasheada del lado servidor — la IP cruda nunca se guarda.",
+        },
+      },
+      {
+        heading: "Status",
+        body: {
+          en: "In production and iterating hard. The San Cristóbal barrio layer is the most-visited surface; the citizen reporting flow is live with anti-troll limits.",
+          es: "En producción e iterando fuerte. La capa de San Cristóbal barrio por barrio es la superficie más visitada; el flujo de reportes ciudadanos está en vivo con límites anti-troll.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "optimal-routine-builder",
+    number: "05",
+    level: 5,
+    category: "apps",
+    name: "Optimal Routine Builder",
+    tagline: {
+      en: "AI-tailored training, end-to-end.",
+      es: "Entrenamiento personalizado por IA, punta a punta.",
+    },
+    description: {
+      en: "A workout generator that pairs Gemini with a structured movement library. Vite + React 19 + Supabase.",
+      es: "Un generador de rutinas que combina Gemini con una librería estructurada de movimientos. Vite + React 19 + Supabase.",
+    },
+    year: "2026",
+    role: designBuild,
+    stack: ["Vite", "React 19", "Gemini API", "Supabase"],
+    status: "live",
+    url: "https://optimal-routine-builder.vercel.app/",
+    screenshots: [],
+    sections: [
+      {
+        heading: "Brief",
+        body: {
+          en: "Generate workout routines that are actually personalized — not the same six exercises rebranded by goal label.",
+          es: "Generar rutinas de ejercicio que estén realmente personalizadas — no los mismos seis ejercicios rebautizados según el objetivo.",
+        },
+      },
+      {
+        heading: "Approach",
+        body: {
+          en: "Gemini for plan synthesis, Supabase for persistence, a structured movement library to keep the model honest about volume, frequency, and recovery windows. A theme sandbox runs in parallel for skin experiments without touching production.",
+          es: "Gemini sintetiza el plan, Supabase guarda, y una librería estructurada de movimientos mantiene al modelo a raya con volumen, frecuencia y descansos. En paralelo corre un sandbox de temas para experimentar skins sin tocar producción.",
+        },
+      },
+      {
+        heading: "Outcome",
+        body: {
+          en: "Shipped and iterating. The most-used surface is the weekly view; routines export cleanly.",
+          es: "Lanzado y en iteración. Lo más usado es la vista semanal; las rutinas exportan limpias.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "misclientes",
+    number: "06",
+    level: 5,
+    category: "apps",
+    luminaStyle: true,
+    name: "misclientes",
+    tagline: {
+      en: "A two-in-one PWA: LATAM dollar rates + a personal tools stack.",
+      es: "Una PWA dos-en-uno: cotización del dólar en LATAM + un stack propio de herramientas.",
+    },
+    description: {
+      en: "Landing for LATAM dollar rates (AR + VE) with a growing bench of personal tools: CRM, expenses, subscriptions, PTO planner, habits, kanban, and games.",
+      es: "Landing de cotizaciones del dólar en LATAM (AR + VE) con un banco creciente de herramientas personales: CRM, gastos, suscripciones, planner de PTO, hábitos, kanban y juegos.",
+    },
+    year: "2026",
+    role: designBuild,
+    stack: ["Vite", "React 19", "TypeScript", "PWA"],
+    status: "live",
+    url: "https://misclientes.vercel.app/",
+    screenshots: [],
+    sections: [
+      {
+        heading: "Brief",
+        body: {
+          en: "A practice project for backend and frontend chops that ended up as a daily driver — dollar rates on top, a growing bench of personal tools underneath.",
+          es: "Un proyecto de práctica para backend y frontend que terminó siendo de uso diario — cotizaciones del dólar arriba, un banco creciente de herramientas personales abajo.",
+        },
+      },
+      {
+        heading: "Approach",
+        body: {
+          en: "Vite + React 19 + TypeScript, PWA with safe areas and offline. All state in localStorage; module-frontier files (storage.ts, cotizaciones.ts) let the future backend swap in without touching views. Structured by domain, not tech.",
+          es: "Vite + React 19 + TypeScript, PWA con safe areas y offline. Todo el estado en localStorage; archivos frontera (storage.ts, cotizaciones.ts) dejan que el backend futuro entre sin tocar las vistas. Estructurado por dominio, no por tecnología.",
+        },
+      },
+      {
+        heading: "Outcome",
+        body: {
+          en: "In production. Eight tools shipped and in daily use.",
+          es: "En producción. Ocho herramientas lanzadas y en uso diario.",
         },
       },
     ],
