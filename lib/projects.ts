@@ -147,8 +147,53 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "optimal-routine-builder",
+    slug: "auditoria-ciudadana",
     number: "03",
+    level: 5,
+    category: "apps",
+    luminaStyle: true,
+    name: "Auditoría Ciudadana",
+    tagline: {
+      en: "The Venezuelan state, mapped and ranked by evidence.",
+      es: "El Estado venezolano, mapeado y clasificado por evidencia.",
+    },
+    description: {
+      en: "Full organigram of the Venezuelan State — around 4,000 positions across 5 branches and 3 territorial levels — with per-role evidence grades, budget flows, and a citizen reporting layer for failing infrastructure.",
+      es: "Organigrama completo del Estado venezolano — cerca de 4.000 cargos entre 5 poderes y 3 niveles territoriales — con grados de evidencia por cargo, flujos de presupuesto, y una capa de reportes ciudadanos sobre infraestructura que falla.",
+    },
+    year: "2026",
+    role: designBuild,
+    stack: ["Vite", "React 19", "Zustand", "Supabase", "Leaflet"],
+    status: "in-progress",
+    url: "https://la-nomina.vercel.app/",
+    screenshots: [],
+    sections: [
+      {
+        heading: "Brief",
+        body: {
+          en: "Make the state legible. Every position, every budget line, every dependency with an evidence grade attached. A complementary layer lets residents report failing infrastructure so the map can cross supply (state spending) against demand (what's actually broken).",
+          es: "Hacer legible el Estado. Cada cargo, cada partida, cada dependencia con un grado de evidencia adjunto. Una capa complementaria deja que los vecinos reporten la infraestructura que falla para poder cruzar oferta (gasto del Estado) contra demanda (lo que no anda).",
+        },
+      },
+      {
+        heading: "Approach",
+        body: {
+          en: "Evidence grades A–E per data point; source required. Estimation cascade in a methods file, not tucked into components. Real budget anchor from the 2025 law (PDF mirrored with attribution). San Cristóbal drawn barrio-by-barrio on Leaflet against 11,449 real OSM rooftops as ground truth. Report rate-limit uses server-side hashed IP pulses — the raw IP is never stored.",
+          es: "Grados de evidencia A–E por dato, con fuente obligatoria. Cascada de estimación en un archivo de métodos, no escondida en componentes. Ancla real de presupuesto: la ley 2025 (PDF espejado con atribución). San Cristóbal dibujado barrio por barrio sobre Leaflet contra 11.449 techos OSM reales como ground truth. El anti-troll de reportes va por pulsos con IP hasheada del lado servidor — la IP cruda nunca se guarda.",
+        },
+      },
+      {
+        heading: "Status",
+        body: {
+          en: "In production and iterating hard. The San Cristóbal barrio layer is the most-visited surface; the citizen reporting flow is live with anti-troll limits.",
+          es: "En producción e iterando fuerte. La capa de San Cristóbal barrio por barrio es la superficie más visitada; el flujo de reportes ciudadanos está en vivo con límites anti-troll.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "optimal-routine-builder",
+    number: "04",
     level: 5,
     category: "apps",
     name: "Optimal Routine Builder",
@@ -192,7 +237,7 @@ export const projects: Project[] = [
   },
   {
     slug: "misclientes",
-    number: "04",
+    number: "05",
     level: 5,
     category: "apps",
     luminaStyle: true,
@@ -236,8 +281,45 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: "foto-dia",
+    number: "06",
+    level: 5,
+    category: "apps",
+    name: "Foto del Día",
+    tagline: {
+      en: "A family PWA where each member posts one photo a day.",
+      es: "PWA familiar donde cada miembro sube una foto por día.",
+    },
+    description: {
+      en: "Daily photo album for a family. Immersive full-bleed viewer, in-app chat, admin panel, offline caching, and a demo mode that runs the whole app off local seed data.",
+      es: "Álbum de fotos diario para una familia. Visor inmersivo full-bleed, chat interno, panel admin, caché offline, y un modo demo que corre toda la app con datos sembrados en el navegador.",
+    },
+    year: "2026",
+    role: designBuild,
+    stack: ["Vite", "React 19", "TypeScript", "Supabase", "PWA"],
+    status: "live",
+    url: "https://albumfamiliar.vercel.app/",
+    screenshots: [],
+    sections: [
+      {
+        heading: "Brief",
+        body: {
+          en: "One photo per person, per day. A family album with the friction that a WhatsApp group can't hold up at scale — history by month, tap-through days, immersive viewing.",
+          es: "Una foto por persona, por día. Un álbum familiar sin la fricción que un grupo de WhatsApp no soporta a escala — historial por mes, tap-through por día, visor inmersivo.",
+        },
+      },
+      {
+        heading: "Approach",
+        body: {
+          en: "RPC-first data: a single call brings today's rooms, members, and photos in one round trip and seeds react-query at boot. 30-day storage signatures persisted in localStorage. Progressive image loading (thumbnail → full via decode() → swap). Pull-to-refresh done in-browser. Immersive is the default; the sober theme is still one tap away.",
+          es: "Data RPC-first: una sola llamada trae las salas, miembros y fotos de hoy en un viaje y siembra react-query al arrancar. Firmas de storage 30 días persistidas en localStorage. Carga progresiva de imágenes (miniatura → grande con decode() → swap). Tirón-para-refrescar hecho en el navegador. Inmersivo es el default; el tema sobrio queda a un tap.",
+        },
+      },
+    ],
+  },
+  {
     slug: "prode-mundial-2026",
-    number: "05",
+    number: "07",
     level: 4,
     category: "apps",
     name: "Prode Mundial 2026",
@@ -281,7 +363,7 @@ export const projects: Project[] = [
   },
   {
     slug: "mauro-barbershop",
-    number: "06",
+    number: "08",
     level: 3,
     category: "client",
     name: "MAURO Barbershop",
@@ -318,7 +400,7 @@ export const projects: Project[] = [
   },
   {
     slug: "laztana-bistro",
-    number: "07",
+    number: "09",
     level: 2,
     category: "client",
     name: "Laztana Bistró",
@@ -355,7 +437,7 @@ export const projects: Project[] = [
   },
   {
     slug: "verduras-ar",
-    number: "08",
+    number: "10",
     level: 4,
     category: "apps",
     name: "verduras.ar",
@@ -392,7 +474,7 @@ export const projects: Project[] = [
   },
   {
     slug: "izifud",
-    number: "09",
+    number: "11",
     level: 5,
     category: "apps",
     luminaStyle: true,
@@ -430,7 +512,7 @@ export const projects: Project[] = [
   },
   {
     slug: "greekyogurt-ar",
-    number: "10",
+    number: "12",
     level: 2,
     category: "client",
     name: "GreekYogurt.ar",
@@ -467,7 +549,7 @@ export const projects: Project[] = [
   },
   {
     slug: "bronco-drift",
-    number: "11",
+    number: "13",
     level: 3,
     category: "tools",
     name: "Bronco Drift",
@@ -504,7 +586,7 @@ export const projects: Project[] = [
   },
   {
     slug: "la-guia",
-    number: "12",
+    number: "14",
     level: 4,
     category: "tools",
     name: "La Guía",
@@ -541,7 +623,7 @@ export const projects: Project[] = [
   },
   {
     slug: "banco-api",
-    number: "13",
+    number: "15",
     level: 3,
     category: "tools",
     name: "Banco API",
@@ -576,8 +658,45 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: "taller-del-logo",
+    number: "16",
+    level: 4,
+    category: "tools",
+    name: "Taller del logo",
+    tagline: {
+      en: "Draw vector figures and animate them — export self-contained SVG or CSS.",
+      es: "Dibujá figuras vectoriales y animalas — exportá SVG o CSS autocontenido.",
+    },
+    description: {
+      en: "Two tabs — draw and animate. Draw stacks figures (Albers rings, rectangle, circle, polygon, star, text) on a canvas. Animate stacks layers with keyframes and exports as self-contained SVG, HTML+CSS, or pure CSS.",
+      es: "Dos pestañas — crear y animar. Crear apila figuras (anillos Albers, rectángulo, círculo, polígono, estrella, texto) sobre un lienzo. Animar apila capas con keyframes y exporta SVG autocontenido, HTML+CSS o solo CSS.",
+    },
+    year: "2026",
+    role: designBuild,
+    stack: ["Node", "SVG", "PWA"],
+    status: "live",
+    url: "https://animador.vercel.app/",
+    screenshots: [],
+    sections: [
+      {
+        heading: "Brief",
+        body: {
+          en: "A tool to make the Foto del Día logo — figure editor plus animator, both in one PWA, no dependencies.",
+          es: "Una herramienta para hacer el logo de Foto del Día — editor de figuras más animador, ambos en una PWA, sin dependencias.",
+        },
+      },
+      {
+        heading: "Approach",
+        body: {
+          en: "Node without dependencies. The preview is the real animation, paused with a negative animation-delay — not a simulation. Undo works via JSON.stringify snapshots taken before each action. Keyframe times live as percentages of the total, never seconds — the same animation stretches to any duration without rework.",
+          es: "Node sin dependencias. La vista previa es la animación real, pausada con animation-delay negativo — no una simulación. El deshacer va por instantáneas JSON.stringify tomadas antes de cada acción. Los tiempos de keyframes viven como porcentaje del total, nunca en segundos — la misma animación estira a cualquier duración sin rehacerla.",
+        },
+      },
+    ],
+  },
+  {
     slug: "fuerzapp",
-    number: "14",
+    number: "17",
     level: 3,
     category: "tools",
     name: "FuerzAPP",
@@ -614,7 +733,7 @@ export const projects: Project[] = [
   },
   {
     slug: "bookmark-studio",
-    number: "15",
+    number: "18",
     level: 3,
     category: "tools",
     name: "Bookmark Studio",
@@ -651,7 +770,7 @@ export const projects: Project[] = [
   },
   {
     slug: "tog-tandem-reader",
-    number: "16",
+    number: "19",
     level: 2,
     category: "tools",
     name: "Throne of Glass — Tandem Reader",
@@ -688,7 +807,7 @@ export const projects: Project[] = [
   },
   {
     slug: "mi-server",
-    number: "17",
+    number: "20",
     level: 4,
     category: "tools",
     luminaStyle: true,
@@ -725,7 +844,7 @@ export const projects: Project[] = [
   },
   {
     slug: "arcade-coop",
-    number: "18",
+    number: "21",
     level: 5,
     category: "games",
     name: "Arcade Coop",
@@ -761,7 +880,7 @@ export const projects: Project[] = [
   },
   {
     slug: "xavo-kobrax",
-    number: "19",
+    number: "22",
     level: 4,
     category: "games",
     name: "Xavo y Kobrax",
@@ -797,7 +916,7 @@ export const projects: Project[] = [
   },
   {
     slug: "bouncing-balls",
-    number: "20",
+    number: "23",
     level: 3,
     category: "games",
     name: "Bouncing Balls",
@@ -834,7 +953,7 @@ export const projects: Project[] = [
   },
   {
     slug: "vikings-txt",
-    number: "21",
+    number: "24",
     level: 2,
     category: "games",
     name: "Vikings.TXT",
@@ -878,7 +997,7 @@ export const projects: Project[] = [
   },
   {
     slug: "rally-aesthetic",
-    number: "22",
+    number: "25",
     level: 2,
     category: "experiments",
     name: "Rally Aesthetic",
@@ -915,7 +1034,7 @@ export const projects: Project[] = [
   },
   {
     slug: "webstudio-argentina",
-    number: "23",
+    number: "26",
     level: 2,
     category: "client",
     name: "WebStudio Argentina",
